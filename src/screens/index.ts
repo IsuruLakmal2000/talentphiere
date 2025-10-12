@@ -1,3 +1,4 @@
 // Export all screens from this file
-export { default as Home } from './Home';
-export { default as OurRoles } from './OurRoles';
+export { Home } from './Home';
+export { OurRoles } from './OurRoles';
+export { SoftwareDevelopment } from './SoftwareDevelopment';

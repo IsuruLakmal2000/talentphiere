@@ -1,1 +1,1 @@
-export { default } from './OurRoles';
+export { default as OurRoles } from './OurRoles';
