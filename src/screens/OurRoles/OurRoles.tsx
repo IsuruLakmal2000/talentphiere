@@ -379,6 +379,92 @@ const OurRoles: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Common Questions Section */}
+      <section className="common-questions-section">
+        <div className="questions-container">
+          <h2 className="questions-title">Common questions</h2>
+          
+          <div className="questions-list">
+            {/* Question 1 */}
+            <div className="question-item">
+              <div className="question-left">
+                <h3 className="question-text">Is my Oceans Diver a full time employee?</h3>
+              </div>
+              <div className="question-right">
+                <p className="answer-text">
+                  Nope, they work for Oceans — but spend all their time with you. 
+                  You should treat them as if they were a full time, long-term member of your team.
+                </p>
+              </div>
+            </div>
+
+            {/* Question 2 */}
+            <div className="question-item">
+              <div className="question-left">
+                <h3 className="question-text">What hours does my Diver work?</h3>
+              </div>
+              <div className="question-right">
+                <p className="answer-text">
+                  Most of our Divers overlap with their clients for 4-5 hours during the day (what we call our sync time), 
+                  and then there's another 3-4 hours that's asynchronous — meaning they can do focused work while you're asleep. 
+                  We can discuss a different overlap if required!
+                </p>
+              </div>
+            </div>
+
+            {/* Question 3 */}
+            <div className="question-item">
+              <div className="question-left">
+                <h3 className="question-text">Is this month to month?</h3>
+              </div>
+              <div className="question-right">
+                <p className="answer-text">
+                  You'll start off with a 3 month trial commitment, because that's the amount of time it takes to begin seeing real value. 
+                  After that, contracts move forward on a rolling, auto-renewal basis.
+                </p>
+              </div>
+            </div>
+
+            {/* Question 4 */}
+            <div className="question-item">
+              <div className="question-left">
+                <h3 className="question-text">How many Divers can Oceans help me hire?</h3>
+              </div>
+              <div className="question-right">
+                <p className="answer-text">
+                  If there's a ceiling, we don't know about it! Oceans can help you scale to as many as you need. 
+                  Some of our clients have built out full functions consisting of 10+ Divers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="final-cta-section">
+        <div className="final-cta-container">
+          <div className="final-cta-icon">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+              <circle cx="60" cy="60" r="55" stroke="#2c5282" strokeWidth="2" opacity="0.3"/>
+              <circle cx="60" cy="60" r="45" stroke="#2c5282" strokeWidth="2" opacity="0.4"/>
+              <circle cx="60" cy="60" r="35" stroke="#2c5282" strokeWidth="2" opacity="0.5"/>
+              <circle cx="60" cy="60" r="25" stroke="#2c5282" strokeWidth="2" opacity="0.6"/>
+              <circle cx="60" cy="60" r="15" stroke="#2c5282" strokeWidth="2" opacity="0.8"/>
+              <circle cx="60" cy="60" r="5" fill="#2c5282"/>
+            </svg>
+          </div>
+          
+          <h2 className="final-cta-title">Start building brilliantly</h2>
+          
+          <p className="final-cta-description">
+            We help you plug highly-skilled and vetted global talent into your business, so you can focus on Building Brilliantly.
+          </p>
+          
+          <button className="final-cta-button">Hire With Oceans</button>
+        </div>
+      </section>
     </div>
   );
 };
