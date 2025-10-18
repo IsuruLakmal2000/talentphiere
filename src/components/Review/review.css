@@ -1,0 +1,138 @@
+:root {
+  --column-height: 420px;
+  --gap: 20px;
+  --pad: 28px;
+}
+
+.reviews-root {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+.reviews-wrap {
+  width: 1200px;
+  display: flex;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.review-column {
+  flex: 1;
+  height: var(--column-height);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 8px rgba(6, 84, 115, 0.04);
+}
+
+.review-viewport {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+}
+
+.review-track {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: var(--pad);
+  box-sizing: border-box;
+  will-change: transform;
+}
+
+.review-card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 8px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #284a58;
+  box-shadow: 0 1px 0 rgba(6,84,115,0.03);
+  font-family: "Poppins", "Open Sans", sans-serif;
+}
+
+.review-text {
+  margin: 0 0 12px 0;
+  color: #284a58;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.review-author {
+  margin: 0;
+  color: #5B91A6;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   Animation for smooth infinite scroll
+   ========================= */
+.col-0 .review-track,
+.col-2 .review-track {
+  animation: scroll-down 25s linear infinite;
+}
+
+.col-1 .review-track {
+  animation: scroll-up 25s linear infinite;
+}
+
+/* Middle column goes bottom -> top */
+@keyframes scroll-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* Side columns go top -> bottom */
+@keyframes scroll-down {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.review-track, .review-card {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@media (max-width: 1100px) {
+  .reviews-wrap {
+    width: 100%;
+    gap: 16px;
+    padding: 0 8px;
+  }
+  :root {
+    --column-height: 360px;
+  }
+}
+
+@media (max-width: 720px) {
+  .reviews-wrap {
+    flex-direction: column;
+  }
+  :root {
+    --column-height: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-track {
+    animation: none !important;
+    transform: none !important;
+  }
+}
