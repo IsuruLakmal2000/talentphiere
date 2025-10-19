@@ -1,0 +1,145 @@
+.success-section {
+  background-color: #f7f8ec;
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  color: #111;
+}
+
+/* Header */
+.success-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header-icon {
+  width: 60px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.success-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.success-header p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Content Layout */
+.success-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Left Grid */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  flex: 1;
+}
+
+.industry-card {
+  background: #e7eade;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.industry-card:hover,
+.industry-card.active {
+  background: #dce0d2;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.industry-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.industry-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.learn-more {
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+/* Right Review Panel */
+.review-panel {
+  background: #e7eade;
+  border-radius: 12px;
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;
+  transition: all 0.3s ease;
+}
+
+.review-text {
+  font-size: 16px;
+  color: #1c1c1c;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewer img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviewer h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.reviewer p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .success-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-panel {
+    width: 100%;
+    min-height: auto;
+  }
+}
