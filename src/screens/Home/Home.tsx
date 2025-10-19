@@ -3,6 +3,7 @@ import './Home.css';
 import Header from '../../components/header';
 import Review from '../../components/Review/reaview';
 import WhyChoose from '../../components/WhyChoose/whychoose';
+import Process from '../../components/HowDoIt/process';
 
 const Home: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const Home: React.FC = () => {
       <Header />
       <Review />
       <WhyChoose />
+      <Process />
     </div>
   );
 };

@@ -1,0 +1,117 @@
+.how-section {
+  background-color: #043a5c;
+  color: #ffffff;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.how-container {
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+}
+
+.how-container h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.how-subtitle {
+  text-align: center;
+  color: #d4e4f2;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 80px;
+  line-height: 1.5;
+}
+
+/* Vertical line */
+.how-timeline {
+  position: relative;
+  margin-left: 60px;
+  padding-left: 60px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Each Step */
+.how-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.how-icon {
+  position: absolute;
+  left: -120px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-icon img {
+  width: 60px;
+  opacity: 0.6;
+}
+
+.how-content {
+  margin-left: 30px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.step-number {
+  background: #ffffff20;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.how-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.how-content p {
+  color: #c5d9e8;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .how-timeline {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .how-step {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .how-icon {
+    position: relative;
+    left: 0;
+    margin-bottom: 10px;
+  }
+
+  .how-content {
+    margin-left: 0;
+  }
+}
