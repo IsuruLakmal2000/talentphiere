@@ -1,0 +1,93 @@
+/* FooterSection.css */
+
+.footer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px; /* Adjust height as needed to match the spacious feel */
+  background: linear-gradient(to bottom, #d9f0fc, #eaf6fd); /* Light blue gradient background */
+  text-align: center;
+  padding: 40px 20px; /* Add some padding for smaller screens */
+  font-family: Arial, sans-serif; /* Use a common sans-serif font */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px; /* Constrain content width */
+}
+
+.footer-logo {
+  width: 100px; /* Adjust logo size as needed */
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.footer-heading {
+  font-size: 56px; /* Large heading size */
+  font-weight: 600; /* Semi-bold */
+  color: #003366; /* Dark blue color */
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.footer-description {
+  font-size: 20px; /* Larger description text */
+  color: #555; /* Slightly lighter gray */
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 600px; /* Ensure description doesn't get too wide */
+}
+
+.footer-button {
+  background: linear-gradient(to bottom, #ff8c42, #e65c00); /* Orange gradient */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 18px 35px; /* Generous padding for a prominent button */
+  font-size: 22px; /* Large button text */
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.footer-button:hover {
+  background: linear-gradient(to bottom, #ff995e, #ff6600); /* Slightly brighter on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-heading {
+    font-size: 40px;
+  }
+  .footer-description {
+    font-size: 18px;
+  }
+  .footer-button {
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+  .footer-logo {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-heading {
+    font-size: 32px;
+  }
+  .footer-description {
+    font-size: 16px;
+  }
+  .footer-button {
+    font-size: 18px;
+    padding: 12px 25px;
+  }
+  .footer-section {
+    min-height: 400px;
+    padding: 30px 15px;
+  }
+}
