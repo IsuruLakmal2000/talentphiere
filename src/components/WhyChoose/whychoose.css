@@ -1,4 +1,4 @@
-.why-oceans-section {
+.home-why-oceans-section {
   background: linear-gradient(180deg, #f2f9fd 0%, #e9f3fa 100%);
   padding: 100px 20px;
   display: flex;
@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.why-oceans-wrapper {
+.home-why-oceans-wrapper {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -18,13 +18,13 @@
 }
 
 /* Card layout */
-.card-column {
+.home-card-column {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.ocean-card {
+.home-ocean-card {
   background: #fff;
   width: 260px;
   padding: 25px 20px;
@@ -34,45 +34,45 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.ocean-card:hover {
+.home-ocean-card:hover {
   transform: scale(1.05) rotate(0deg);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-.ocean-card .icon {
+.home-ocean-card .home-card-icon {
   font-size: 22px;
   margin-bottom: 8px;
 }
 
-.ocean-card h3 {
+.home-ocean-card h3 {
   font-size: 18px;
   color: #0f2942;
   margin-bottom: 10px;
   font-weight: 700;
 }
 
-.ocean-card p {
+.home-ocean-card p {
   font-size: 15px;
   color: #406080;
   line-height: 1.5;
 }
 
 /* Center text */
-.why-center {
+.home-why-center {
   text-align: center;
   max-width: 320px;
   padding: 0 20px;
   margin-top: 150px;
 }
 
-.why-center .plus-icon {
+.home-why-center .home-plus-icon {
   font-size: 64px;
   color: #0f2942;
   opacity: 0.2;
   margin-bottom: 10px;
 }
 
-.why-center h2 {
+.home-why-center h2 {
   font-size: 36px;
   color: #0f2942;
   font-weight: 800;
@@ -80,7 +80,7 @@
   font-family: Abrial FatFace;
 }
 
-.why-center p {
+.home-why-center p {
   color: #406080;
   font-size: 16px;
   line-height: 1.6;
@@ -88,20 +88,20 @@
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .why-oceans-wrapper {
+  .home-why-oceans-wrapper {
     flex-direction: column;
     align-items: center;
     gap: 40px;
   }
 
-  .card-column {
+  .home-card-column {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
   }
 
-  .why-center {
+  .home-why-center {
     order: -1;
   }
 }

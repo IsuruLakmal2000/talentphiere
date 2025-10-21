@@ -1,4 +1,5 @@
-.hero-section {
+/* Using unique class names to avoid conflicts with RoleTemplate */
+.home-page-hero {
   background-color: #e0f1f8; /* light ocean blue */
   background-image: radial-gradient(
     circle at right center,
@@ -14,13 +15,13 @@
 }
 
 
-.hero-content {
+.home-page-hero-content {
   max-width: 800px;
   margin: 0 auto;
 }
 
 /* Title */
-.hero-title {
+.home-page-hero-title {
   font-size: 3rem;
   font-weight: 700;
   color: #0a3854;
@@ -29,14 +30,14 @@
 }
 
 /* Subtitle */
-.hero-subtitle {
+.home-page-hero-subtitle {
   max-width: 700px;
   margin: 0 auto 40px auto;
   font-size: 1.1rem;
   color: #49616f;
 }
 /* Button */
-.hero-button {
+.home-page-hero-button {
   background-color: #ff6a00;
   color: white;
   border: none;
@@ -48,21 +49,21 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.hero-button:hover {
+.home-page-hero-button:hover {
   background-color: #e35c00;
   transform: translateY(-2px);
 }
 /* Responsive */
 @media (max-width: 768px) {
-  .hero-title {
+  .home-page-hero-title {
     font-size: 2rem;
   }
 
-  .hero-subtitle {
+  .home-page-hero-subtitle {
     font-size: 1rem;
   }
 
-  .hero-button {
+  .home-page-hero-button {
     padding: 12px 30px;
     font-size: 0.9rem;
   }

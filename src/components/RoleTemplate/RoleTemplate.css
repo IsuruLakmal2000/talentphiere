@@ -9,11 +9,11 @@
 }
 
 /* Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* COMMENTED OUT - Causing conflicts */ /* * {
+/* COMMENTED OUT - Causing conflicts */ /*   margin: 0;
+/* COMMENTED OUT - Causing conflicts */ /*   padding: 0;
+/* COMMENTED OUT - Causing conflicts */ /*   box-sizing: border-box;
+/* COMMENTED OUT - Causing conflicts */ /* } */
 
 .page-container {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
@@ -23,11 +23,11 @@
 
 /* Hero Section - Ocean Talent Style */
 .hero-section {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 0;
+  padding: 4rem 0 2rem 0;
   text-align: center;
 }
 
@@ -101,10 +101,10 @@
 
 /* Profiles Section - Exact Reference Match */
 .profiles-section {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
-  padding: 20rem;
+  padding: 3rem 0 5rem 0;
 }
 
 .section-container {
@@ -443,10 +443,10 @@
 
 /* Testimonial Section */
 .testimonial-section {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
-  padding: 6rem 0;
+  padding: 10rem 0;
 }
 
 .testimonial-container {
@@ -603,7 +603,7 @@
   }
   
   .testimonial-section {
-    padding: 4rem 0;
+    padding: 2rem 0;
   }
 }
 
@@ -1243,11 +1243,10 @@
   transform: translateY(0);
 }
 
-/* Profiles Section */
-.profiles-section {
+/* Profiles Section - Duplicate removed, see main definition at line 103 */
+/* .profiles-section {
   padding: 6rem 2rem 4rem 2rem;
-  
-}
+} */
 
 .profiles-content {
   max-width: 1200px;

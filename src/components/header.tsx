@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import "./header.css";
 
 interface HeaderProps {
   title: string;
@@ -20,19 +20,19 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <header
-      className="hero-section"
+      className="home-page-hero"
       style={
         backgroundImage
           ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover" }
           : {}
       }
     >
-      <div className="hero-content">
-        <h1 className="hero-title">{title}</h1>
-        {subtitle && <p className="hero-subtitle">{subtitle}</p>}
+      <div className="home-page-hero-content">
+        <h1 className="home-page-hero-title">{title}</h1>
+        {subtitle && <p className="home-page-hero-subtitle">{subtitle}</p>}
 
         {buttonText && (
-          <button className="hero-button" onClick={onButtonClick}>
+          <button className="home-page-hero-button" onClick={onButtonClick}>
             {buttonText}
           </button>
         )}

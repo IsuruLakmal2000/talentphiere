@@ -45,17 +45,17 @@ const rightCards = [
 
 const WhyOceans: React.FC = () => {
   return (
-    <section className="why-oceans-section">
-      <div className="why-oceans-wrapper">
+    <section className="home-why-oceans-section">
+      <div className="home-why-oceans-wrapper">
         {/* Left column */}
-        <div className="card-column left">
+        <div className="home-card-column left">
           {leftCards.map((card, index) => (
             <div
               key={index}
-              className="ocean-card"
+              className="home-ocean-card"
               style={{ transform: `rotate(${card.rotate}deg)` }}
             >
-              <div className="icon">{card.icon}</div>
+              <div className="home-card-icon">{card.icon}</div>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             </div>
@@ -63,8 +63,8 @@ const WhyOceans: React.FC = () => {
         </div>
 
         {/* Center text */}
-        <div className="why-center">
-          <div className="plus-icon">+</div>
+        <div className="home-why-center">
+          <div className="home-plus-icon">+</div>
           <h2>Why Oceans</h2>
           <p>
             Over 400 companies have embedded Oceans talent into their
@@ -73,14 +73,14 @@ const WhyOceans: React.FC = () => {
         </div>
 
         {/* Right column */}
-        <div className="card-column right">
+        <div className="home-card-column right">
           {rightCards.map((card, index) => (
             <div
               key={index}
-              className="ocean-card"
+              className="home-ocean-card"
               style={{ transform: `rotate(${card.rotate}deg)` }}
             >
-              <div className="icon">{card.icon}</div>
+              <div className="home-card-icon">{card.icon}</div>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             </div>
