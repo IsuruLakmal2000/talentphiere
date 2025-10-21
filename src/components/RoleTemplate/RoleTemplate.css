@@ -19,6 +19,7 @@
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
   min-height: 100vh;
   padding: 0 15rem; /* Add consistent page padding */
+  padding-top: 70px; /* Space for fixed navbar */
 }
 
 /* Hero Section - Ocean Talent Style */
@@ -27,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 0 2rem 0;
+  padding: 2rem 0 2rem 0;
   text-align: center;
 }
 

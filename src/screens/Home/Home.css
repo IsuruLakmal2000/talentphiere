@@ -5,6 +5,7 @@
   justify-content: center;
   min-height: 100vh;
   padding: 2rem;
+  padding-top: 70px; /* Space for fixed navbar */
   text-align: center;
 }
 
