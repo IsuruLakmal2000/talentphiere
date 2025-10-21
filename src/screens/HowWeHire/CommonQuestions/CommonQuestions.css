@@ -1,0 +1,82 @@
+/* CommonQuestions.css */
+
+/* --- Main Section and Background --- */
+.common-questions-section {
+  /* Dark blue background color from the image */
+  background-color: #0d2847; 
+  padding: 80px 20px;
+  color: white; /* Default text color */
+}
+
+.common-questions-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* --- Section Title --- */
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* --- Q&A List Container --- */
+.qa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px; /* Small gap to ensure the borders separate nicely */
+}
+
+/* --- Individual Q&A Item --- */
+.qa-item {
+  display: flex;
+  /* Use a background slightly lighter than the section for subtle contrast,
+     though in the image, the contrast mostly comes from the padding/layout. */
+  background-color: #123157; 
+}
+
+/* --- Question Column --- */
+.qa-question {
+  /* Matches the width ratio in the screenshot */
+  flex: 0 0 35%; 
+  padding: 20px 25px;
+  font-weight: 500;
+  font-size: 16px;
+  /* Right border to separate Question from Answer */
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- Answer Column --- */
+.qa-answer {
+  /* Takes up the remaining space */
+  flex: 1; 
+  padding: 20px 25px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8); /* Slightly less bright white for the answer text */
+}
+
+/* Apply top and bottom borders to the entire rows for the grid look */
+.qa-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* Ensure the last item has a bottom border too */
+.qa-list .qa-item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- Mobile Responsiveness (Optional but recommended) --- */
+@media (max-width: 768px) {
+  .qa-item {
+    flex-direction: column;
+    border-right: none; /* Remove right border on mobile */
+  }
+
+  .qa-question {
+    flex: 1; /* Question takes full width */
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a bottom separator */
+    font-weight: 600;
+  }
+}

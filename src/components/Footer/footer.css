@@ -40,23 +40,24 @@
   max-width: 600px; /* Ensure description doesn't get too wide */
 }
 
+/* Button */
 .footer-button {
-  background: linear-gradient(to bottom, #ff8c42, #e65c00); /* Orange gradient */
+  background-color: #ff6a00;
   color: white;
   border: none;
-  border-radius: 8px; /* Slightly rounded corners */
-  padding: 18px 35px; /* Generous padding for a prominent button */
-  font-size: 22px; /* Large button text */
-  font-weight: 600;
+  padding: 15px 40px;
+  font-size: 1rem;
+  border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .footer-button:hover {
-  background: linear-gradient(to bottom, #ff995e, #ff6600); /* Slightly brighter on hover */
-  transform: translateY(-2px); /* Subtle lift effect */
+  background-color: #e35c00;
+  transform: translateY(-2px);
 }
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
