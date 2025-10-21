@@ -252,6 +252,8 @@
   transition: all 0.4s ease;
   box-shadow: 0 2px 8px rgba(30, 58, 138, 0.15);
   white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .navbar-container.scrolled .navbar-cta {
@@ -264,6 +266,7 @@
 .navbar-cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+  text-decoration: none;
 }
 
 .navbar-container.scrolled .navbar-cta:hover {

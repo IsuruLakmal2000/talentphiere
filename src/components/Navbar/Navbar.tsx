@@ -108,7 +108,7 @@ const Navbar: React.FC = () => {
             </li>
           </ul>
 
-          <button className="navbar-cta">Hire With Oceans</button>
+          <Link to="/hire" className="navbar-cta">Hire With Oceans</Link>
         </div>
       </div>
     </nav>
