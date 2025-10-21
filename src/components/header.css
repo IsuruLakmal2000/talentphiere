@@ -13,6 +13,12 @@
   overflow: hidden;
 }
 
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 /* Title */
 .hero-title {
   font-size: 3rem;
@@ -29,7 +35,6 @@
   font-size: 1.1rem;
   color: #49616f;
 }
-
 /* Button */
 .hero-button {
   background-color: #ff6a00;
@@ -47,7 +52,6 @@
   background-color: #e35c00;
   transform: translateY(-2px);
 }
-
 /* Responsive */
 @media (max-width: 768px) {
   .hero-title {
