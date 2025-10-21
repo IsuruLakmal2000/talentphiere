@@ -4,6 +4,7 @@
 .process-cards-section {
   padding: 50px 20px;
   background-color: #f0f8ff; /* Light background */
+  height: 2000px; /* Ensure enough height for scrolling effect */
 }
 
 h1 {
@@ -22,7 +23,7 @@ p {
   /* Calculate the total required height for the stacking to complete */
   /* (Number of cards * Card Height) - (Height of the final view) */
   /* Example: 4 cards * 450px = 1800px. This should be adjusted based on your card design. */
-  height: 2000px; /* Needs to be large enough to allow the effect to complete */
+  height: 1800px; /* Needs to be large enough to allow the effect to complete */
   position: relative; /* All sticky children are relative to this parent */
   max-width: 800px;
   margin: 0 auto;
@@ -34,8 +35,8 @@ p {
   position: sticky;
   /* Setting the top: 0 here is key. All cards try to stick to the top of the viewport. */
   top: 0;
-  height: 450px; /* Set a fixed height for better calculation in JS */
-  padding: 10px 0; /* Add some vertical spacing */
+  height: 350px; /* Set a fixed height for better calculation in JS */
+  padding: 50px 0; /* Add some vertical spacing */
   pointer-events: none; /* Allows scrolling/clicking "through" the stacked wrappers */
 }
 /* Only the last card wrapper needs pointer events to be clickable/readable in the final state */

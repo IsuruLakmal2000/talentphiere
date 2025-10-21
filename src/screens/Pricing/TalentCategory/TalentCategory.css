@@ -1,0 +1,136 @@
+/* TalentSection.css */
+
+/* --- General Layout and Section Styles --- */
+
+.talent-section {
+  padding: 40px 20px;
+  background-color: #f7f9fb; /* Light blue background for the entire section */
+  font-family: Arial, sans-serif;
+}
+
+/* --- Category Buttons Styles --- */
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #dbe4f1; /* Lighter blue background for the button bar */
+  overflow-x: auto; /* Allow horizontal scrolling on small screens */
+}
+
+.category-button {
+  background-color: transparent;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563; /* Default text color */
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+.category-button span {
+  margin-right: 5px;
+  font-size: 16px; /* Adjust icon size */
+}
+
+/* Active Button Style */
+.category-button.active {
+  background-color: white;
+  color: #000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+/* Hover Style */
+.category-button:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- Talent Cards Grid and Card Styles --- */
+
+.cards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.talent-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 300px; /* Fixed card width */
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 2px solid #3b82f6; /* Blue border to match the design style */
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #1f2937;
+}
+
+.experience {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 2px 0 0 0;
+}
+
+.card-details {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 15px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 18px;
+  color: #3b82f6; /* Blue color for icons */
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+.text {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.no-results {
+  font-size: 16px;
+  color: #6b7280;
+  text-align: center;
+  padding: 30px;
+}
