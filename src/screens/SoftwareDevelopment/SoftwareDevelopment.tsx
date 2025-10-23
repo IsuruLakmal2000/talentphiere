@@ -2,10 +2,10 @@ import React from 'react';
 import { RoleTemplate } from '../../components/RoleTemplate';
 
 const SoftwareDevelopment: React.FC = () => {
-  const heroTitle = "Hire Software Developers built for startups";
+  const heroTitle = "Development & Innovation Talent for Modern Teams";
   
   const heroDescription = 
-    "Get access to experienced developers who can ship fast, think strategically, and scale with your team. From full-stack engineers to specialized developers, we match you with talent that fits your tech stack and culture.";
+    "Access experienced developers and innovators who combine technical excellence with strategic thinking. From building MVPs to scaling infrastructure, our talent brings the skills and mindset to drive your product forward.";
 
   const profilesSectionTitle = "Best-in-class Developer Profiles";
   

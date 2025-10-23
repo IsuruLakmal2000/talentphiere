@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { Navbar } from './components'
-import { Home, OurRoles, SoftwareDevelopment } from './screens'
+import { Home, OurRoles, SoftwareDevelopment, InfrastructureOperations, DigitalMarketingGrowth, BrandStrategy } from './screens'
 import HowWeHire from './screens/HowWeHire/HowWeHire'
 import Pricing from './screens/Pricing/Pricing'
 import HireForm from './screens/HireForm/HireForm'
@@ -18,6 +18,9 @@ const AppContent: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/roles/executive-assistant" element={<OurRoles />} />
         <Route path="/roles/software-development" element={<SoftwareDevelopment />} />
+        <Route path="/roles/infrastructure-operations" element={<InfrastructureOperations />} />
+        <Route path="/roles/digital-marketing-growth" element={<DigitalMarketingGrowth />} />
+        <Route path="/roles/brand-strategy" element={<BrandStrategy />} />
         <Route path="/how-we-hire" element={<HowWeHire />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/hire" element={<HireForm />} />

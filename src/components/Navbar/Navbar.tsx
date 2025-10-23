@@ -91,8 +91,44 @@ const Navbar: React.FC = () => {
                   >
                     <div className="dropdown-item-icon">💻</div>
                     <div className="dropdown-item-content">
-                      <div className="dropdown-item-title">Software Development</div>
+                      <div className="dropdown-item-title">Development & Innovation</div>
                       <div className="dropdown-item-description">Experienced developers for startups</div>
+                    </div>
+                  </Link>
+
+                  <Link 
+                    to="/roles/infrastructure-operations" 
+                    className="dropdown-item"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    <div className="dropdown-item-icon">⚙️</div>
+                    <div className="dropdown-item-content">
+                      <div className="dropdown-item-title">Infrastructure & Operations</div>
+                      <div className="dropdown-item-description">DevOps, cloud, and SRE experts</div>
+                    </div>
+                  </Link>
+
+                  <Link 
+                    to="/roles/digital-marketing-growth" 
+                    className="dropdown-item"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    <div className="dropdown-item-icon">📈</div>
+                    <div className="dropdown-item-content">
+                      <div className="dropdown-item-title">Digital Marketing & Growth</div>
+                      <div className="dropdown-item-description">Performance marketing and growth experts</div>
+                    </div>
+                  </Link>
+
+                  <Link 
+                    to="/roles/brand-strategy" 
+                    className="dropdown-item"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    <div className="dropdown-item-icon">🎨</div>
+                    <div className="dropdown-item-content">
+                      <div className="dropdown-item-title">Brand & Strategy</div>
+                      <div className="dropdown-item-description">Strategic brand and creative professionals</div>
                     </div>
                   </Link>
                 </div>
