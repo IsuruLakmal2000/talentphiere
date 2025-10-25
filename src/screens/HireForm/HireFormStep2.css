@@ -107,6 +107,42 @@
   font-weight: 400;
 }
 
+/* Button container for back and continue buttons */
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.form-back-btn {
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: #2c5f7a;
+  border: 2px solid #2c5f7a;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-back-btn:hover {
+  background: #f0f9ff;
+  transform: translateY(-1px);
+}
+
+.form-back-btn:active {
+  transform: translateY(0);
+}
+
+/* Override submit button to work in flex container */
+.form-buttons .form-submit-btn {
+  margin: 0;
+  align-self: initial;
+}
+
 /* Responsive adjustments for Step 2 */
 @media (max-width: 768px) {
   .checkbox-item {

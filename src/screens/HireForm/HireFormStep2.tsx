@@ -5,6 +5,7 @@ import './HireFormStep2.css';
 interface HireFormStep2Props {
   onNext: (data: FormData) => void;
   onBack: () => void;
+  initialData?: FormData;
 }
 
 interface FormData {
@@ -16,15 +17,17 @@ interface FormData {
   lookingFor: string[];
 }
 
-const HireFormStep2: React.FC<HireFormStep2Props> = ({ onNext, onBack }) => {
-  const [formData, setFormData] = useState<FormData>({
-    companyName: '',
-    companyWebsite: '',
-    yourTitle: '',
-    industry: '',
-    howDidYouHear: '',
-    lookingFor: []
-  });
+const HireFormStep2: React.FC<HireFormStep2Props> = ({ onNext, onBack, initialData }) => {
+  const [formData, setFormData] = useState<FormData>(
+    initialData || {
+      companyName: '',
+      companyWebsite: '',
+      yourTitle: '',
+      industry: '',
+      howDidYouHear: '',
+      lookingFor: []
+    }
+  );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -119,13 +122,13 @@ const HireFormStep2: React.FC<HireFormStep2Props> = ({ onNext, onBack }) => {
               <div className="form-group">
                 <label htmlFor="companyWebsite" className="form-label">Company Website</label>
                 <input
-                  type="url"
+                  type="text"
                   id="companyWebsite"
                   name="companyWebsite"
                   value={formData.companyWebsite}
                   onChange={handleChange}
                   className="form-input"
-                  placeholder="Company Website"
+                  placeholder="www.example.com or https://example.com"
                   required
                 />
               </div>
@@ -227,9 +230,14 @@ const HireFormStep2: React.FC<HireFormStep2Props> = ({ onNext, onBack }) => {
                 </div>
               </div>
 
-              <button type="submit" className="form-submit-btn">
-                Continue
-              </button>
+              <div className="form-buttons">
+                <button type="button" className="form-back-btn" onClick={onBack}>
+                  Back
+                </button>
+                <button type="submit" className="form-submit-btn">
+                  Continue
+                </button>
+              </div>
             </form>
           </div>
         </div>

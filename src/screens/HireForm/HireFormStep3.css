@@ -1,0 +1,214 @@
+/* HireFormStep3.css */
+
+/* Import base styles from Step 1 */
+@import './HireFormStep1.css';
+
+/* Success Content Specific Styles */
+.success-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.success-icon {
+  margin-bottom: 2rem;
+  animation: scaleIn 0.5s ease-out;
+}
+
+.success-icon.submitting {
+  margin-bottom: 2rem;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #2c5f7a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.success-icon.error svg circle,
+.success-icon.error svg path {
+  stroke: #ef4444;
+}
+
+.success-heading {
+  font-family: 'Bastia', 'Georgia', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c5f7a;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.error-heading {
+  color: #ef4444;
+}
+
+.success-description {
+  font-size: 1.0625rem;
+  color: #6b7280;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 0 2.5rem 0;
+}
+
+.success-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: white;
+  border-radius: 12px;
+  border: 1.5px solid #e5e7eb;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  border-color: #2c5f7a;
+  box-shadow: 0 4px 12px rgba(44, 95, 122, 0.1);
+}
+
+.detail-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.detail-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detail-text strong {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #2c5f7a;
+}
+
+.detail-text span {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.back-home-btn {
+  background: linear-gradient(135deg, #2c5f7a 0%, #1e4a5f 100%);
+  color: white;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(44, 95, 122, 0.3);
+}
+
+.back-home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(44, 95, 122, 0.4);
+}
+
+.back-home-btn:active {
+  transform: translateY(0);
+}
+
+.retry-btn {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+}
+
+.retry-btn:hover {
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .success-heading {
+    font-size: 2rem;
+  }
+
+  .success-description {
+    font-size: 1rem;
+  }
+
+  .detail-item {
+    padding: 1rem;
+  }
+
+  .detail-icon {
+    font-size: 1.5rem;
+  }
+
+  .detail-text strong {
+    font-size: 0.875rem;
+  }
+
+  .detail-text span {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-icon svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .success-heading {
+    font-size: 1.75rem;
+  }
+
+  .success-description {
+    font-size: 0.9375rem;
+  }
+
+  .success-details {
+    gap: 1rem;
+  }
+
+  .detail-item {
+    padding: 0.875rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .back-home-btn {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+}

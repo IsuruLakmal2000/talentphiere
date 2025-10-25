@@ -4,6 +4,7 @@ import './HireFormStep1.css';
 
 interface HireFormStep1Props {
   onNext: (data: FormData) => void;
+  initialData?: FormData;
 }
 
 interface FormData {
@@ -12,12 +13,14 @@ interface FormData {
   workEmail: string;
 }
 
-const HireFormStep1: React.FC<HireFormStep1Props> = ({ onNext }) => {
-  const [formData, setFormData] = useState<FormData>({
-    firstName: '',
-    lastName: '',
-    workEmail: ''
-  });
+const HireFormStep1: React.FC<HireFormStep1Props> = ({ onNext, initialData }) => {
+  const [formData, setFormData] = useState<FormData>(
+    initialData || {
+      firstName: '',
+      lastName: '',
+      workEmail: ''
+    }
+  );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
