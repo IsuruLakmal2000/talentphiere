@@ -3,28 +3,23 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleMouseEnter = () => {
-    setIsDropdownOpen(true);
+  const handleMouseEnter = (menu: string) => {
+    setOpenDropdown(menu);
   };
 
   const handleMouseLeave = () => {
-    setIsDropdownOpen(false);
+    setOpenDropdown(null);
   };
 
   return (
@@ -42,41 +37,80 @@ const Navbar: React.FC = () => {
           </Link>
 
           <ul className="navbar-menu">
-            <li className="navbar-item">
-              <Link to="/resources" className="navbar-link">Resources</Link>
-            </li>
-
-            <li 
+            {/* Resources Dropdown */}
+            <li
               className="navbar-item dropdown"
-              onMouseEnter={handleMouseEnter}
+              onMouseEnter={() => handleMouseEnter('resources')}
               onMouseLeave={handleMouseLeave}
             >
               <span className="navbar-link">
-                Our Roles
-                <svg 
-                  className={`dropdown-icon ${isDropdownOpen ? 'open' : ''}`}
-                  width="14" 
-                  height="14" 
-                  viewBox="0 0 16 16" 
+                Resources
+                <svg
+                  className={`dropdown-icon ${openDropdown === 'resources' ? 'open' : ''}`}
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
                   fill="none"
                 >
-                  <path 
-                    d="M4 6L8 10L12 6" 
-                    stroke="currentColor" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                 </svg>
               </span>
 
-              {isDropdownOpen && (
+              {openDropdown === 'resources' && (
                 <div className="dropdown-menu">
-                  <Link 
-                    to="/roles/executive-assistant" 
-                    className="dropdown-item"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
+                  <Link to="success-story" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
+                    <div className="dropdown-item-icon">🏆</div>
+                    <div className="dropdown-item-content">
+                      <div className="dropdown-item-title">Success Stories</div>
+                      <div className="dropdown-item-description">Find Our Success Stories</div>
+                    </div>
+                  </Link>
+
+                  <Link to="how-to-guide" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
+                    <div className="dropdown-item-icon">📘</div>
+                    <div className="dropdown-item-content">
+                      <div className="dropdown-item-title">How To Guide</div>
+                      <div className="dropdown-item-description">Step by Step Guidance</div>
+                    </div>
+                  </Link>
+                </div>
+              )}
+            </li>
+
+            {/* Our Roles Dropdown */}
+            <li
+              className="navbar-item dropdown"
+              onMouseEnter={() => handleMouseEnter('roles')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <span className="navbar-link">
+                Our Roles
+                <svg
+                  className={`dropdown-icon ${openDropdown === 'roles' ? 'open' : ''}`}
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+
+              {openDropdown === 'roles' && (
+                <div className="dropdown-menu">
+                  <Link to="/roles/executive-assistant" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
                     <div className="dropdown-item-icon">👔</div>
                     <div className="dropdown-item-content">
                       <div className="dropdown-item-title">Executive Assistant</div>
@@ -84,11 +118,7 @@ const Navbar: React.FC = () => {
                     </div>
                   </Link>
 
-                  <Link 
-                    to="/roles/software-development" 
-                    className="dropdown-item"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
+                  <Link to="/roles/software-development" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
                     <div className="dropdown-item-icon">💻</div>
                     <div className="dropdown-item-content">
                       <div className="dropdown-item-title">Development & Innovation</div>
@@ -96,11 +126,7 @@ const Navbar: React.FC = () => {
                     </div>
                   </Link>
 
-                  <Link 
-                    to="/roles/infrastructure-operations" 
-                    className="dropdown-item"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
+                  <Link to="/roles/infrastructure-operations" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
                     <div className="dropdown-item-icon">⚙️</div>
                     <div className="dropdown-item-content">
                       <div className="dropdown-item-title">Infrastructure & Operations</div>
@@ -108,11 +134,7 @@ const Navbar: React.FC = () => {
                     </div>
                   </Link>
 
-                  <Link 
-                    to="/roles/digital-marketing-growth" 
-                    className="dropdown-item"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
+                  <Link to="/roles/digital-marketing-growth" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
                     <div className="dropdown-item-icon">📈</div>
                     <div className="dropdown-item-content">
                       <div className="dropdown-item-title">Digital Marketing & Growth</div>
@@ -120,11 +142,7 @@ const Navbar: React.FC = () => {
                     </div>
                   </Link>
 
-                  <Link 
-                    to="/roles/brand-strategy" 
-                    className="dropdown-item"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
+                  <Link to="/roles/brand-strategy" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
                     <div className="dropdown-item-icon">🎨</div>
                     <div className="dropdown-item-content">
                       <div className="dropdown-item-title">Brand & Strategy</div>

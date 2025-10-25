@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../../components/header";   
 import TalentSection from "./TalentCategory/TalentCategory";
 import WhyOceans from "./WhyOceans/WhyOceans";
+import FooterSection from "../../components/Footer/footer";
+import CommonQuestions from "./PricingQuestions/PricingQuestions";
 
 const Pricing: React.FC = () => {
   return (
@@ -14,6 +16,8 @@ const Pricing: React.FC = () => {
         />
         <TalentSection />
         <WhyOceans />
+        <CommonQuestions />
+        <FooterSection />
 
     </div>
   );
