@@ -1,0 +1,77 @@
+.story-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Inter", sans-serif;
+  line-height: 1.8;
+  color: #1a1a1a;
+}
+
+.story-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.story-logo {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.story-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #012f50;
+}
+
+.story-author {
+  font-size: 1rem;
+  color: #555;
+}
+
+.story-main-image img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.story-section {
+  margin-bottom: 40px;
+}
+
+.story-section h2 {
+  color: #012f50;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.story-section p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+.story-section blockquote {
+  border-left: 4px solid #f97316;
+  padding-left: 16px;
+  font-style: italic;
+  background: #f9f9f9;
+  margin: 20px 0;
+  color: #333;
+}
+
+.story-section-image img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.story-conclusion {
+  background: #f3f8fb;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.story-conclusion h3 {
+  color: #012f50;
+  margin-bottom: 10px;
+}
