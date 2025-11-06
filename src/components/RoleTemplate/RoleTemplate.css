@@ -16,7 +16,12 @@
 /* COMMENTED OUT - Causing conflicts */ /* } */
 
 .page-container {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+  background-color: #e0f1f8; /* light ocean blue - matches homepage */
+  background-image: radial-gradient(
+    circle at right center,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(224, 241, 248, 1) 70%
+  );
   min-height: 100vh;
   padding: 0; /* Remove horizontal padding to allow footer full width */
   padding-top: 70px; /* Space for fixed navbar */
@@ -121,7 +126,7 @@
   font-family: 'Bastia', 'Georgia', serif;
   font-size: 2.8rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: #2c3e50 !important;
   margin-bottom: 1.5rem;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -447,7 +452,7 @@
   min-height: auto;
   display: flex;
   align-items: center;
-  padding: 10rem 0;
+  padding: 10rem 15rem; /* Add horizontal padding to match other sections */
 }
 
 .testimonial-container {
