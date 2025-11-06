@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { Navbar } from './components'
 import { Home, OurRoles, SoftwareDevelopment, InfrastructureOperations, DigitalMarketingGrowth, BrandStrategy } from './screens'
 import SuccessStory from './screens/SuccessStory/SuccessStory'
-import HowToGuide from './screens/SuccessStory/HowToGuide'
+import HowToGuide from './screens/HowToGuide/HowToGuide'
 import HowWeHire from './screens/HowWeHire/HowWeHire'
 import Pricing from './screens/Pricing/Pricing'
 import HireForm from './screens/HireForm/HireForm'
