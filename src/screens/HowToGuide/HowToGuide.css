@@ -1,0 +1,169 @@
+.playbooks-hero {
+  background: #f8faf9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+
+.hero-content h1 {
+  font-size: 46px;
+  font-weight: 700;
+  color: #1c2a33;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #5a6b75;
+  max-width: 600px;
+  margin: 0 auto 24px;
+  line-height: 1.5;
+}
+
+.hire-btn {
+  background: #f7672b;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hire-btn:hover {
+  background: #ff8b56;
+}
+
+/* Logo Row */
+.hero-logos {
+  margin-top: 50px;
+}
+
+.hero-logos p {
+  font-weight: 600;
+  color: #2e3a44;
+  margin-bottom: 16px;
+}
+
+.logo-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+.logo-list img {
+  max-height: 36px;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.logo-list img:hover {
+  opacity: 1;
+}
+
+/* Guides Section */
+.guides-section {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.guide-card {
+  background: #f9fbfc;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.guide-card:hover {
+  transform: translateY(-4px);
+}
+
+.guide-img {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.guide-content {
+  padding: 20px;
+}
+
+.guide-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1b2b33;
+}
+
+.guide-content p {
+  font-size: 15px;
+  color: #54636f;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.read-btn {
+  color: #f7672b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.read-btn:hover {
+  text-decoration: underline;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(180deg, #f8fbfc 0%, #fff 100%);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta-section h2 {
+  font-size: 32px;
+  color: #1c2a33;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  color: #5a6b75;
+  margin-bottom: 24px;
+}
+
+.cta-btn {
+  background: #f7672b;
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background: #ff8b56;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

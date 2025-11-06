@@ -2,6 +2,16 @@ import React from "react";
 import "./SuccessStory.css";
 import FooterSection from "../../components/Footer/footer";
 import Header from "../../components/header";
+import case1 from "../../assets/cases/case1.png";
+import case2 from "../../assets/cases/case2.png";
+import case3 from "../../assets/cases/case3.png";
+import case4 from "../../assets/cases/case4.png";
+import case5 from "../../assets/cases/case5.png";
+import case6 from "../../assets/cases/case6.png";
+import case7 from "../../assets/cases/case7.png";
+import case8 from "../../assets/cases/case8.png";
+import case9 from "../../assets/cases/case9.png";
+import { Link } from "react-router-dom";
 
 /**
  * Success Stories / Case studies section
@@ -23,64 +33,64 @@ const cases: CaseStudy[] = [
     id: "c1",
     title: "Part-time vs. Full-time assistants: Why the former was more work",
     subtitle: "Part-time vs. Full-time assistants: Why the former was more work",
-    hero: "/assets/cases/case-1.jpg",
-    href: "#",
+    hero: case1,
+    href: "success-story/Story1",
   },
   {
     id: "c2",
     title: "How True Classic runs a $250M business with global talent",
     subtitle: "How True Classic runs a $250M business with global talent",
-    hero: "/assets/cases/case-2.jpg",
-    href: "#",
+    hero: case2,
+    href: "success-story/Story1",
   },
   {
     id: "c3",
     title: "\"I don't want an assistant\" to hiring three Divers",
     subtitle: "\"I don't want an assistant\" to hiring three Divers",
-    hero: "/assets/cases/case-3.jpg",
-    href: "#",
+    hero: case3,
+    href: "success-story/Story1",
   },
   {
     id: "c4",
     title: "From in-person to remote: The next phase of Bite",
     subtitle: "Going from in-person to a fully remote organization",
-    hero: "/assets/cases/case-4.jpg",
-    href: "#",
+    hero: case4,
+    href: "success-story/Story1",
   },
   {
     id: "c5",
     title: "When a long-time solopreneur learns to delegate",
     subtitle: "When a long-time solopreneur learns to delegate",
-    hero: "/assets/cases/case-5.jpg",
-    href: "#",
+    hero: case5,
+    href: "success-story/Story1",
   },
   {
     id: "c6",
     title: "How MXA saves $200k annually with Oceans",
     subtitle: "How MXA saves $200k annually with Oceans",
-    hero: "/assets/cases/case-6.jpg",
-    href: "#",
+    hero: case6,
+    href: "success-story/Story1",
   },
   {
     id: "c7",
     title: "From overwhelmed to organized inbox",
     subtitle: "From overwhelmed to organized inbox",
-    hero: "/assets/cases/case-7.jpg",
-    href: "#",
+    hero: case7,
+    href: "success-story/Story1",
   },
   {
     id: "c8",
     title: "When a tax firm needs administrative support",
     subtitle: "When a tax firm needs administrative support",
-    hero: "/assets/cases/case-8.jpg",
-    href: "#",
+    hero: case8,
+    href: "success-story/Story1",
   },
   {
     id: "c9",
     title: "A struggling one-man finance team finds leverage",
     subtitle: "A struggling one-man finance team finds leverage",
-    hero: "/assets/cases/case-9.jpg",
-    href: "#",
+    hero: case9,
+    href: "success-story/Story1",
   },
 ];
 
@@ -91,9 +101,11 @@ const CaseCard: React.FC<{ s: CaseStudy }> = ({ s }) => {
         <div
           className="case-hero"
           style={{
-            backgroundImage: s.hero
-              ? `linear-gradient(90deg, rgba(7,86,106,0.92) 0 52%, rgba(246,249,250,1) 52%), url(${s.hero})`
-              : `linear-gradient(90deg, rgba(7,86,106,0.92) 0 52%, rgba(246,249,250,1) 52%)`,
+            
+            backgroundImage: s.hero ? `url(${s.hero})` : "none",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
           role="img"
           aria-hidden="true"
