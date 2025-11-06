@@ -1,94 +1,323 @@
 /* FooterSection.css */
 
+/* Main Footer Container */
 .footer-section {
+  width: 100%;
+}
+
+/* CTA Section - Light gradient */
+.footer-cta {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 500px; /* Adjust height as needed to match the spacious feel */
-  background: linear-gradient(to bottom, #d9f0fc, #eaf6fd); /* Light blue gradient background */
+  min-height: 500px;
+  background: linear-gradient(to bottom, #d9f0fc, #eaf6fd);
   text-align: center;
-  padding: 40px 20px; /* Add some padding for smaller screens */
-  font-family: Arial, sans-serif; /* Use a common sans-serif font */
+  padding: 80px 20px;
 }
 
-.footer-content {
+.footer-cta-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 700px; /* Constrain content width */
+  max-width: 700px;
 }
 
 .footer-logo {
-  width: 100px; /* Adjust logo size as needed */
+  width: 100px;
   height: auto;
   margin-bottom: 30px;
 }
 
 .footer-heading {
-  font-size: 56px; /* Large heading size */
-  font-weight: 600; /* Semi-bold */
-  color: #003366; /* Dark blue color */
+  font-family: 'Bastia', 'Georgia', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #003366;
   margin-bottom: 20px;
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .footer-description {
-  font-size: 20px; /* Larger description text */
-  color: #555; /* Slightly lighter gray */
-  line-height: 1.5;
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.6;
   margin-bottom: 40px;
-  max-width: 600px; /* Ensure description doesn't get too wide */
+  max-width: 600px;
 }
 
-/* Button */
 .footer-button {
   background-color: #ff6a00;
   color: white;
   border: none;
   padding: 15px 40px;
   font-size: 1rem;
+  font-weight: 600;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .footer-button:hover {
   background-color: #e35c00;
   transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Main Footer Content - Blue Background */
+.footer-main {
+  background: linear-gradient(135deg, #2c5f7a 0%, #1e4a5f 100%);
+  padding: 80px 20px 60px;
+  color: white;
+}
 
-/* Responsive Adjustments */
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 60px;
+}
+
+/* About Column (Wider) */
+.footer-about {
+  max-width: 350px;
+}
+
+.footer-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo-text {
+  font-family: 'Bastia', 'Georgia', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.05em;
+}
+
+.footer-about-text {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+/* Social Links */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Footer Columns */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column-title {
+  font-family: 'Bastia', 'Georgia', serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.footer-links li {
+  margin: 0;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Copyright Bar */
+.footer-bottom {
+  background: #1a3d4f;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-bottom-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.footer-tagline {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8125rem;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .footer-container {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  
+  .footer-column:last-child {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  
+  .footer-about {
+    grid-column: 1 / -1;
+    max-width: 100%;
+  }
+  
+  .footer-column:last-child {
+    grid-column: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-heading {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
+  
   .footer-description {
-    font-size: 18px;
+    font-size: 1rem;
   }
+  
   .footer-button {
-    font-size: 20px;
-    padding: 15px 30px;
+    font-size: 0.9375rem;
+    padding: 12px 30px;
   }
+  
   .footer-logo {
     width: 80px;
+  }
+  
+  .footer-main {
+    padding: 60px 20px 40px;
+  }
+  
+  .footer-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .footer-about {
+    grid-column: auto;
+    text-align: center;
+  }
+  
+  .footer-logo-section {
+    justify-content: center;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+  
+  .footer-column {
+    text-align: center;
+  }
+  
+  .footer-links a:hover {
+    transform: none;
   }
 }
 
 @media (max-width: 480px) {
   .footer-heading {
-    font-size: 32px;
+    font-size: 2rem;
   }
+  
   .footer-description {
-    font-size: 16px;
+    font-size: 0.9375rem;
   }
+  
   .footer-button {
-    font-size: 18px;
+    font-size: 0.875rem;
     padding: 12px 25px;
   }
-  .footer-section {
+  
+  .footer-cta {
     min-height: 400px;
-    padding: 30px 15px;
+    padding: 60px 15px;
+  }
+  
+  .footer-main {
+    padding: 50px 15px 30px;
+  }
+  
+  .footer-bottom {
+    padding: 25px 15px;
+  }
+  
+  .footer-copyright,
+  .footer-tagline {
+    font-size: 0.75rem;
   }
 }

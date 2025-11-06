@@ -18,7 +18,7 @@
 .page-container {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
   min-height: 100vh;
-  padding: 0 15rem; /* Add consistent page padding */
+  padding: 0; /* Remove horizontal padding to allow footer full width */
   padding-top: 70px; /* Space for fixed navbar */
 }
 
@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 15rem 2rem 15rem; /* Add horizontal padding */
   text-align: center;
 }
 
@@ -105,7 +105,7 @@
   min-height: auto;
   display: flex;
   align-items: center;
-  padding: 3rem 0 5rem 0;
+  padding: 3rem 15rem 5rem 15rem; /* Add horizontal padding */
 }
 
 .section-container {
@@ -615,7 +615,7 @@
   align-items: center;
   padding: 6rem 15rem;
   background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1e3a5f 100%);
-  margin: 0 -15rem; /* Break out of page container padding */
+  margin: 0; /* No negative margin needed since page-container has no padding */
 }
 
 .how-container {
@@ -1503,7 +1503,7 @@
 .why-oceans-section {
   display: flex;
   align-items: center;
-  padding: 4rem 0;
+  padding: 4rem 15rem; /* Add horizontal padding */
 }
 
 .why-container {
@@ -1755,7 +1755,7 @@
 .common-questions-section {
   background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1e3a5f 100%);
   padding: 6rem 15rem;
-  margin: 0 -15rem; /* Break out of page container padding */
+  margin: 0; /* No negative margin needed since page-container has no padding */
   color: white;
 }
 
