@@ -54,7 +54,7 @@ const Guides: React.FC = () => {
               <div className="guide-content">
                 <h3>{guide.title}</h3>
                 <p>{guide.description}</p>
-                <Link to={`/guides/${guide.id}`} className="read-btn">
+                <Link to="/guides/NickStory" className="read-btn">
                   Read Guide →
                 </Link>
               </div>

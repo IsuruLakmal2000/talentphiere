@@ -8,6 +8,7 @@ import HowWeHire from './screens/HowWeHire/HowWeHire'
 import Pricing from './screens/Pricing/Pricing'
 import HireForm from './screens/HireForm/HireForm'
 import TrueClassicStory from './screens/SuccessStory/Story1'
+import NikSharmaPlaybook from './screens/HowToGuide/NickStory'
 import './App.css'
 
 const AppContent: React.FC = () => {
@@ -30,6 +31,7 @@ const AppContent: React.FC = () => {
         <Route path="/success-story" element={<SuccessStory />} />
         <Route path="/how-to-guide" element={<HowToGuide />} />
         <Route path="/success-story/Story1" element={<TrueClassicStory />} />
+        <Route path="/guides/NickStory" element={<NikSharmaPlaybook/>} />
       </Routes>
     </div>
   );
