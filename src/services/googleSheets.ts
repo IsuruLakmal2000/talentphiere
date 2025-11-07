@@ -1,7 +1,7 @@
 // Google Sheets API Service
 // Replace these URLs with your actual Google Apps Script Web App URLs after deployment
 const HIRE_FORM_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyl2TAC332KpwvYKgcvgDGW6qVtVy4mqeK3-AYGoRHSoSVcFdlDKF5Vjfxh-xjsMRUb/exec';
-const CAREER_FORM_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxCIVEJdSc9e_NLq9LQGF9KryL6MpTUByW5F_kP1FZHWTbFy4FdBieDbpQXyOJqFZEWOg/exec';
+const CAREER_FORM_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyA1gGq20jOr1fTGcASH-7ogkUTwGct3GQyaolN4uyIQkvRwqxDe9FkbbiBA9XaBWLHnQ/exec';
 
 export interface HireFormData {
   // Step 1
@@ -35,6 +35,10 @@ export interface CareerFormData {
   portfolioUrl: string;
   linkedinUrl: string;
   coverLetter: string;
+  // CV Upload (optional)
+  cvFile?: string; // Base64 encoded file
+  cvFileName?: string;
+  cvMimeType?: string;
 }
 
 export interface SubmitResponse {
@@ -81,6 +85,7 @@ export async function submitHireForm(data: HireFormData): Promise<SubmitResponse
 
 /**
  * Submit career form data to Google Sheets via Google Apps Script
+ * @param data - Career form data including optional CV file
  */
 export async function submitCareerForm(data: CareerFormData): Promise<SubmitResponse> {
   try {
@@ -111,6 +116,25 @@ export async function submitCareerForm(data: CareerFormData): Promise<SubmitResp
       timestamp: new Date().toISOString()
     };
   }
+}
+
+/**
+ * Convert a File object to base64 string
+ * @param file - The file to convert
+ * @returns Promise with base64 string (without data URL prefix)
+ */
+export async function fileToBase64(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = reader.result as string;
+      // Remove the data URL prefix (e.g., "data:application/pdf;base64,")
+      const base64 = result.split(',')[1];
+      resolve(base64);
+    };
+    reader.onerror = (error) => reject(error);
+    reader.readAsDataURL(file);
+  });
 }
 
 /**

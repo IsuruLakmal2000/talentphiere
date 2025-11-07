@@ -4,7 +4,7 @@ import CareerFormStep1 from './CareerFormStep1';
 import CareerFormStep2 from './CareerFormStep2';
 import CareerFormStep3 from './CareerFormStep3';
 import CareerFormStep4 from './CareerFormStep4';
-import { submitCareerForm } from '../../services/googleSheets';
+import { submitCareerForm, fileToBase64 } from '../../services/googleSheets';
 import type { CareerFormData } from '../../services/googleSheets';
 import './CareerForm.css';
 
@@ -29,6 +29,7 @@ interface Step3Data {
   portfolioUrl: string;
   linkedinUrl: string;
   coverLetter: string;
+  cvFile?: File | null;
 }
 
 const CareerForm: React.FC = () => {
@@ -55,35 +56,55 @@ const CareerForm: React.FC = () => {
     setCurrentStep(4);
     setIsSubmitting(true);
 
-    // Merge all steps data
-    const completeFormData: CareerFormData = {
-      // Step 1
-      firstName: step1Data?.firstName || '',
-      lastName: step1Data?.lastName || '',
-      email: step1Data?.email || '',
-      phone: step1Data?.phone || '',
-      location: step1Data?.location || '',
-      // Step 2
-      roleCategory: step2Data?.roleCategory || '',
-      experience: step2Data?.experience || '',
-      currentTitle: step2Data?.currentTitle || '',
-      availability: step2Data?.availability || '',
-      desiredSalary: step2Data?.desiredSalary || '',
-      // Step 3
-      skills: data.skills,
-      portfolioUrl: data.portfolioUrl,
-      linkedinUrl: data.linkedinUrl,
-      coverLetter: data.coverLetter
-    };
+    try {
+      // Merge all steps data
+      const completeFormData: CareerFormData = {
+        // Step 1
+        firstName: step1Data?.firstName || '',
+        lastName: step1Data?.lastName || '',
+        email: step1Data?.email || '',
+        phone: step1Data?.phone || '',
+        location: step1Data?.location || '',
+        // Step 2
+        roleCategory: step2Data?.roleCategory || '',
+        experience: step2Data?.experience || '',
+        currentTitle: step2Data?.currentTitle || '',
+        availability: step2Data?.availability || '',
+        desiredSalary: step2Data?.desiredSalary || '',
+        // Step 3
+        skills: data.skills,
+        portfolioUrl: data.portfolioUrl,
+        linkedinUrl: data.linkedinUrl,
+        coverLetter: data.coverLetter
+      };
 
-    // Submit to Google Sheets
-    const result = await submitCareerForm(completeFormData);
-    
-    setIsSubmitting(false);
-    setSubmitSuccess(result.success);
-    
-    if (!result.success) {
-      setErrorMessage(result.message || 'An error occurred while submitting the form.');
+      // Handle CV file if uploaded
+      if (data.cvFile) {
+        try {
+          const cvBase64 = await fileToBase64(data.cvFile);
+          completeFormData.cvFile = cvBase64;
+          completeFormData.cvFileName = data.cvFile.name;
+          completeFormData.cvMimeType = data.cvFile.type;
+        } catch (fileError) {
+          console.error('Error processing CV file:', fileError);
+          // Continue without CV if there's an error
+        }
+      }
+
+      // Submit to Google Sheets
+      const result = await submitCareerForm(completeFormData);
+      
+      setIsSubmitting(false);
+      setSubmitSuccess(result.success);
+      
+      if (!result.success) {
+        setErrorMessage(result.message || 'An error occurred while submitting the form.');
+      }
+    } catch (error) {
+      console.error('Error in form submission:', error);
+      setIsSubmitting(false);
+      setSubmitSuccess(false);
+      setErrorMessage('An unexpected error occurred. Please try again.');
     }
   };
 

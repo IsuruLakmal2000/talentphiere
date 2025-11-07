@@ -71,9 +71,9 @@ function doPost(e) {
     // Append the form data
     appendFormData(sheet, data);
     
-    // Send email notification (optional)
+    // Send email notification with CV attachment (optional)
     if (ADMIN_EMAIL !== 'your-email@example.com') {
-      sendEmailNotification(data);
+      sendEmailNotificationWithCV(data);
     }
     
     // Return success response
@@ -147,7 +147,8 @@ function createHeaders(sheet) {
     'Skills',
     'Portfolio URL',
     'LinkedIn URL',
-    'Cover Letter'
+    'Cover Letter',
+    'CV Attached'
   ];
   
   sheet.appendRow(headers);
@@ -178,6 +179,7 @@ function createHeaders(sheet) {
   sheet.setColumnWidth(13, 250); // Portfolio
   sheet.setColumnWidth(14, 250); // LinkedIn
   sheet.setColumnWidth(15, 400); // Cover Letter
+  sheet.setColumnWidth(16, 100); // CV Attached
 }
 
 /**
@@ -185,6 +187,9 @@ function createHeaders(sheet) {
  */
 function appendFormData(sheet, data) {
   const timestamp = new Date();
+  
+  // Check if CV was uploaded
+  const cvAttached = data.cvFile ? 'Yes' : 'No';
   
   // Prepare row data
   const rowData = [
@@ -202,7 +207,8 @@ function appendFormData(sheet, data) {
     Array.isArray(data.skills) ? data.skills.join(', ') : data.skills || '',
     data.portfolioUrl || '',
     data.linkedinUrl || '',
-    data.coverLetter || ''
+    data.coverLetter || '',
+    cvAttached
   ];
   
   // Append the row
@@ -222,9 +228,9 @@ function appendFormData(sheet, data) {
 }
 
 /**
- * Send email notification to admin
+ * Send email notification to admin with CV attachment
  */
-function sendEmailNotification(data) {
+function sendEmailNotificationWithCV(data) {
   try {
     const subject = `New Career Application: ${data.firstName} ${data.lastName} - ${data.roleCategory}`;
     
@@ -263,11 +269,45 @@ Submitted: ${new Date().toLocaleString()}
 View all applications: ${SpreadsheetApp.openById(SPREADSHEET_ID).getUrl()}
     `;
     
-    MailApp.sendEmail(ADMIN_EMAIL, subject, body);
+    // Check if CV was uploaded
+    if (data.cvFile && data.cvFileName && data.cvMimeType) {
+      try {
+        // Decode the base64 file data
+        const cvBlob = Utilities.newBlob(
+          Utilities.base64Decode(data.cvFile),
+          data.cvMimeType,
+          data.cvFileName
+        );
+        
+        // Send email with CV attachment
+        MailApp.sendEmail({
+          to: ADMIN_EMAIL,
+          subject: subject,
+          body: body,
+          attachments: [cvBlob]
+        });
+        
+        Logger.log('Email sent with CV attachment: ' + data.cvFileName);
+      } catch (attachmentError) {
+        console.error('Error attaching CV to email:', attachmentError);
+        // Send email without attachment if there's an error
+        MailApp.sendEmail(ADMIN_EMAIL, subject, body + '\n\n⚠️ Note: CV attachment could not be processed.');
+      }
+    } else {
+      // Send email without attachment if no CV was uploaded
+      MailApp.sendEmail(ADMIN_EMAIL, subject, body + '\n\n⚠️ Note: No CV was uploaded with this application.');
+    }
   } catch (error) {
     console.error('Error sending email notification:', error);
     // Don't throw error - form submission should still succeed even if email fails
   }
+}
+
+/**
+ * Send email notification to admin (legacy function - kept for compatibility)
+ */
+function sendEmailNotification(data) {
+  sendEmailNotificationWithCV(data);
 }
 
 /**
@@ -288,7 +328,11 @@ function testScript() {
     skills: ['React / Frontend', 'Node.js / Backend', 'Full-Stack Development'],
     portfolioUrl: 'https://johndoe.dev',
     linkedinUrl: 'https://linkedin.com/in/johndoe',
-    coverLetter: 'I am excited to apply for this position...'
+    coverLetter: 'I am excited to apply for this position...',
+    // CV fields (optional - comment out to test without CV)
+    cvFile: null, // Base64 string would go here
+    cvFileName: null, // 'John_Doe_Resume.pdf'
+    cvMimeType: null // 'application/pdf'
   };
   
   const mockEvent = {

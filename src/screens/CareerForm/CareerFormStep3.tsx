@@ -13,6 +13,7 @@ interface FormData {
   portfolioUrl: string;
   linkedinUrl: string;
   coverLetter: string;
+  cvFile?: File | null;
 }
 
 const CareerFormStep3: React.FC<CareerFormStep3Props> = ({ onNext, onBack, initialData }) => {
@@ -21,9 +22,11 @@ const CareerFormStep3: React.FC<CareerFormStep3Props> = ({ onNext, onBack, initi
       skills: [],
       portfolioUrl: '',
       linkedinUrl: '',
-      coverLetter: ''
+      coverLetter: '',
+      cvFile: null
     }
   );
+  const [cvFileName, setCvFileName] = useState<string>('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -41,6 +44,44 @@ const CareerFormStep3: React.FC<CareerFormStep3Props> = ({ onNext, onBack, initi
         ? [...prev.skills, value]
         : prev.skills.filter(item => item !== value)
     }));
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      // Validate file type
+      const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+      if (!allowedTypes.includes(file.type)) {
+        alert('Please upload a PDF or Word document');
+        e.target.value = '';
+        return;
+      }
+
+      // Validate file size (max 5MB)
+      const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+      if (file.size > maxSize) {
+        alert('File size must be less than 5MB');
+        e.target.value = '';
+        return;
+      }
+
+      setFormData(prev => ({
+        ...prev,
+        cvFile: file
+      }));
+      setCvFileName(file.name);
+    }
+  };
+
+  const handleRemoveCV = () => {
+    setFormData(prev => ({
+      ...prev,
+      cvFile: null
+    }));
+    setCvFileName('');
+    // Reset file input
+    const fileInput = document.getElementById('cvFile') as HTMLInputElement;
+    if (fileInput) fileInput.value = '';
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -265,6 +306,39 @@ const CareerFormStep3: React.FC<CareerFormStep3Props> = ({ onNext, onBack, initi
                   rows={6}
                   required
                 />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="cvFile" className="form-label">
+                  Upload Your CV/Resume (Optional)
+                  <span className="label-subtitle">PDF or Word document, max 5MB</span>
+                </label>
+                <div className="file-upload-wrapper">
+                  <input
+                    type="file"
+                    id="cvFile"
+                    name="cvFile"
+                    onChange={handleFileChange}
+                    className="form-file-input"
+                    accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                  />
+                  <label htmlFor="cvFile" className="file-upload-label">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                      <polyline points="17 8 12 3 7 8"/>
+                      <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                    <span>{cvFileName || 'Choose file or drag here'}</span>
+                  </label>
+                  {cvFileName && (
+                    <div className="file-selected">
+                      <span className="file-name">📄 {cvFileName}</span>
+                      <button type="button" onClick={handleRemoveCV} className="file-remove-btn">
+                        ✕
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div className="form-button-group">
