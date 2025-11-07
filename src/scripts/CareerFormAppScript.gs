@@ -1,47 +1,56 @@
 /**
- * CAREER FORM GOOGLE APPS SCRIPT
+ * OCEANS CAREER FORM GOOGLE APPS SCRIPT
+ * 
+ * This script handles submissions from the Oceans Career Application Form
+ * It saves data to Google Sheets and optionally sends email notifications
  * 
  * SETUP INSTRUCTIONS:
  * ===================
  * 
- * 1. Create a new Google Sheet:
- *    - Go to https://sheets.google.com
- *    - Create a new spreadsheet
- *    - Name it "Oceans Career Applications" or similar
+ * 1. Open your existing Google Spreadsheet OR create a new one:
+ *    - If creating new: Go to https://sheets.google.com and create a spreadsheet
+ *    - Name it "Oceans Career Applications" or use your existing spreadsheet
+ *    - Copy the Spreadsheet ID from the URL:
+ *      https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit
  * 
- * 2. Open Apps Script Editor:
- *    - Click Extensions > Apps Script
+ * 2. Update Configuration Below:
+ *    - Replace SPREADSHEET_ID with your actual spreadsheet ID
+ *    - Update ADMIN_EMAIL if you want email notifications
+ * 
+ * 3. Open Apps Script Editor:
+ *    - In your spreadsheet, click Extensions > Apps Script
  *    - Delete any existing code
  *    - Copy and paste this entire script
+ *    - Save the project (Ctrl+S or Cmd+S)
  * 
- * 3. Deploy as Web App:
+ * 4. Deploy as Web App:
  *    - Click Deploy > New Deployment
  *    - Click the gear icon next to "Select type"
  *    - Choose "Web app"
  *    - Fill in:
- *      - Description: "Career Form Handler"
+ *      - Description: "Oceans Career Form Handler"
  *      - Execute as: Me
  *      - Who has access: Anyone
  *    - Click "Deploy"
+ *    - Authorize the script when prompted
  *    - Copy the Web App URL
  * 
- * 4. Update Your React App:
+ * 5. Update Your React App:
  *    - Open src/services/googleSheets.ts
  *    - Replace 'YOUR_CAREER_FORM_GOOGLE_APPS_SCRIPT_URL_HERE' with the copied URL
  * 
- * 5. Test the connection:
- *    - Submit a test application from your website
- *    - Check the Google Sheet for the new entry
- * 
- * OPTIONAL: Email Notifications
- * ==============================
- * Update the ADMIN_EMAIL constant below with your email address
- * to receive notifications when new applications are submitted.
+ * 6. Test:
+ *    - Run the testWithSampleData() function in Apps Script first
+ *    - Then submit a test application from your website
+ *    - Check the Google Sheet for the new entries
  */
 
-// Configuration
-const ADMIN_EMAIL = 'your-email@example.com'; // Change this to your email
-const SHEET_NAME = 'Applications'; // Name of the sheet tab
+// ========================================
+// CONFIGURATION - UPDATE THESE VALUES
+// ========================================
+const SPREADSHEET_ID = 'PASTE_YOUR_SPREADSHEET_ID_HERE'; // ⚠️ REPLACE WITH YOUR ACTUAL SPREADSHEET ID
+const ADMIN_EMAIL = 'your-email@example.com'; // ⚠️ REPLACE WITH YOUR EMAIL for notifications
+const SHEET_NAME = 'Career Applications'; // Name of the sheet tab
 
 /**
  * Handle POST requests (form submissions)
@@ -109,7 +118,7 @@ function doGet(e) {
  * Get or create the applications sheet
  */
 function getOrCreateSheet() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
   let sheet = ss.getSheetByName(SHEET_NAME);
   
   if (!sheet) {
@@ -251,7 +260,7 @@ ${data.coverLetter}
 ================================
 Submitted: ${new Date().toLocaleString()}
 
-View all applications: ${SpreadsheetApp.getActiveSpreadsheet().getUrl()}
+View all applications: ${SpreadsheetApp.openById(SPREADSHEET_ID).getUrl()}
     `;
     
     MailApp.sendEmail(ADMIN_EMAIL, subject, body);

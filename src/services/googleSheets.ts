@@ -1,7 +1,7 @@
 // Google Sheets API Service
 // Replace these URLs with your actual Google Apps Script Web App URLs after deployment
 const HIRE_FORM_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyl2TAC332KpwvYKgcvgDGW6qVtVy4mqeK3-AYGoRHSoSVcFdlDKF5Vjfxh-xjsMRUb/exec';
-const CAREER_FORM_SCRIPT_URL = 'YOUR_CAREER_FORM_GOOGLE_APPS_SCRIPT_URL_HERE';
+const CAREER_FORM_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxCIVEJdSc9e_NLq9LQGF9KryL6MpTUByW5F_kP1FZHWTbFy4FdBieDbpQXyOJqFZEWOg/exec';
 
 export interface HireFormData {
   // Step 1
