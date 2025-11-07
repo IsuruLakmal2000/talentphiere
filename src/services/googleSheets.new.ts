@@ -49,7 +49,6 @@ export interface SubmitResponse {
  */
 export async function submitHireForm(data: HireFormData): Promise<SubmitResponse> {
   try {
-    
     // Make the API call
     await fetch(HIRE_FORM_SCRIPT_URL, {
       method: 'POST',
@@ -69,7 +68,7 @@ export async function submitHireForm(data: HireFormData): Promise<SubmitResponse
     };
 
   } catch (error) {
-    console.error('Error submitting form:', error);
+    console.error('Error submitting hire form:', error);
     return {
       success: false,
       message: 'Failed to submit form. Please try again or contact us directly.',
@@ -118,8 +117,6 @@ export async function submitCareerForm(data: CareerFormData): Promise<SubmitResp
  */
 export async function submitHireFormWithResponse(data: HireFormData): Promise<SubmitResponse> {
   try {
-   
-
     const response = await fetch(HIRE_FORM_SCRIPT_URL, {
       method: 'POST',
       headers: {
@@ -151,8 +148,6 @@ export async function submitHireFormWithResponse(data: HireFormData): Promise<Su
  */
 export async function testConnection(): Promise<boolean> {
   try {
-    
-
     const response = await fetch(HIRE_FORM_SCRIPT_URL, {
       method: 'GET'
     });

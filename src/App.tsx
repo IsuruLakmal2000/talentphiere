@@ -1,22 +1,21 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { Navbar } from './components'
-import { Home, OurRoles, SoftwareDevelopment, InfrastructureOperations, DigitalMarketingGrowth, BrandStrategy } from './screens'
+import { Home, OurRoles, SoftwareDevelopment, InfrastructureOperations, DigitalMarketingGrowth, BrandStrategy, HireForm, CareerForm } from './screens'
 import SuccessStory from './screens/SuccessStory/SuccessStory'
 import HowToGuide from './screens/HowToGuide/HowToGuide'
 import HowWeHire from './screens/HowWeHire/HowWeHire'
 import Pricing from './screens/Pricing/Pricing'
-import HireForm from './screens/HireForm/HireForm'
 import TrueClassicStory from './screens/SuccessStory/Story1'
 import './App.css'
 
 const AppContent: React.FC = () => {
   const location = useLocation();
-  const isHireFormPage = location.pathname === '/hire';
+  const isFormPage = location.pathname === '/hire' || location.pathname === '/careers';
 
   return (
     <div className="app">
-      {!isHireFormPage && <Navbar />}
+      {!isFormPage && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/roles/executive-assistant" element={<OurRoles />} />
@@ -27,6 +26,7 @@ const AppContent: React.FC = () => {
         <Route path="/how-we-hire" element={<HowWeHire />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/hire" element={<HireForm />} />
+        <Route path="/careers" element={<CareerForm />} />
         <Route path="/success-story" element={<SuccessStory />} />
         <Route path="/how-to-guide" element={<HowToGuide />} />
         <Route path="/success-story/Story1" element={<TrueClassicStory />} />

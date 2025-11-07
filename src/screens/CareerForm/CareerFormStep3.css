@@ -1,0 +1,186 @@
+/* CareerFormStep3.css */
+
+/* Import base styles from Step 1 */
+@import './CareerFormStep1.css';
+
+/* Step 2 specific overrides and additions */
+
+/* Completed step styling */
+.step-item.completed {
+  opacity: 0.6;
+}
+
+.step-number.completed {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* Select dropdown styling */
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.125rem center;
+  padding-right: 3rem;
+  cursor: pointer;
+}
+
+.form-select:focus {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%232c5f7a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* Checkbox group styling */
+.checkbox-group {
+  gap: 0.75rem;
+}
+
+.checkbox-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.label-subtitle {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #6b7280;
+  margin-top: 0.125rem;
+}
+
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+  background-color: white;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+  background-color: #2c5f7a;
+  border-color: #2c5f7a;
+}
+
+.checkbox-item input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-item input[type="checkbox"]:hover {
+  border-color: #2c5f7a;
+}
+
+.checkbox-item input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(44, 95, 122, 0.1);
+}
+
+.checkbox-text {
+  font-size: 0.9375rem;
+  color: #374151;
+  font-weight: 400;
+}
+
+/* Button container for back and continue buttons */
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.form-back-btn {
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: #2c5f7a;
+  border: 2px solid #2c5f7a;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-back-btn:hover {
+  background: #f0f9ff;
+  transform: translateY(-1px);
+}
+
+.form-back-btn:active {
+  transform: translateY(0);
+}
+
+/* Override submit button to work in flex container */
+.form-buttons .form-submit-btn {
+  margin: 0;
+  align-self: initial;
+}
+
+/* Responsive adjustments for Step 2 */
+@media (max-width: 768px) {
+  .checkbox-item {
+    gap: 0.625rem;
+  }
+
+  .checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+
+  .checkbox-text {
+    font-size: 0.875rem;
+  }
+
+  .label-subtitle {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkbox-item {
+    gap: 0.5rem;
+  }
+
+  .checkbox-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .checkbox-item input[type="checkbox"]:checked::after {
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+  }
+
+  .checkbox-text {
+    font-size: 0.8125rem;
+  }
+}
