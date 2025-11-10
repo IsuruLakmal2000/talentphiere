@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FooterSection from '../Footer/footer';
 import './RoleTemplate.css';
 
 interface CategoryItem {
@@ -414,29 +415,8 @@ const RoleTemplate: React.FC<RoleTemplateProps> = ({
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="final-cta-section">
-        <div className="final-cta-container">
-          <div className="final-cta-icon">
-            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-              <circle cx="60" cy="60" r="55" stroke="#2c5282" strokeWidth="2" opacity="0.3"/>
-              <circle cx="60" cy="60" r="45" stroke="#2c5282" strokeWidth="2" opacity="0.4"/>
-              <circle cx="60" cy="60" r="35" stroke="#2c5282" strokeWidth="2" opacity="0.5"/>
-              <circle cx="60" cy="60" r="25" stroke="#2c5282" strokeWidth="2" opacity="0.6"/>
-              <circle cx="60" cy="60" r="15" stroke="#2c5282" strokeWidth="2" opacity="0.8"/>
-              <circle cx="60" cy="60" r="5" fill="#2c5282"/>
-            </svg>
-          </div>
-          
-          <h2 className="final-cta-title">Start building brilliantly</h2>
-          
-          <p className="final-cta-description">
-            We help you plug highly-skilled and vetted global talent into your business, so you can focus on Building Brilliantly.
-          </p>
-          
-          <button className="final-cta-button">Hire With Oceans</button>
-        </div>
-      </section>
+      {/* Footer */}
+      <FooterSection />
     </div>
   );
 };

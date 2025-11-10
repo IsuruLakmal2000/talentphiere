@@ -1,3 +1,11 @@
+/* Font Import - Bastia Font for Headers */
+@font-face {
+  font-family: 'Bastia';
+  src: url('./assets/fonts/Bastia-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -27,6 +35,13 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #ffffff;
+}
+
+/* Apply Bastia font to all headers and section titles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bastia', 'Georgia', serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 h1 {

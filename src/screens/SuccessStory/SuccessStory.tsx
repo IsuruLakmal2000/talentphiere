@@ -11,7 +11,6 @@ import case6 from "../../assets/cases/case6.png";
 import case7 from "../../assets/cases/case7.png";
 import case8 from "../../assets/cases/case8.png";
 import case9 from "../../assets/cases/case9.png";
-import { Link } from "react-router-dom";
 
 /**
  * Success Stories / Case studies section
