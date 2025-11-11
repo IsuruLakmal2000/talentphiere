@@ -26,7 +26,7 @@ const stories: Story[] = [
     description:
       "Cheers Health is a $15M/year business. Their CEO had become overwhelmed by his inbox and needed to remove the bottleneck.",
     review:
-      "The Oceans team helped us regain focus on core strategy by integrating support talent who are proactive and adaptable.",
+      "The Talentphere team helped us regain focus on core strategy by integrating support talent who are proactive and adaptable.",
     name: "John Roberts",
     role: "Cheers Health",
     image: "/images/john.png",
@@ -36,7 +36,7 @@ const stories: Story[] = [
     description:
       "MXA is a fast-growing, remote-first company. Their account managers were over-capacity managing new and existing business.",
     review:
-      "Partnering with Oceans made scaling smooth — we onboarded skilled professionals without losing company culture.",
+      "Partnering with Talentphere made scaling smooth — we onboarded skilled professionals without losing company culture.",
     name: "Sarah Kim",
     role: "MXA",
     image: "/images/sarah.png",
@@ -46,7 +46,7 @@ const stories: Story[] = [
     description:
       "Dan ran a successful consulting company by himself, for 5 years. Then he had a baby, and thus began the path to delegation.",
     review:
-      "Working with Oceans gave me the flexibility to focus on family and business growth simultaneously. A true game-changer!",
+      "Working with Talentphere gave me the flexibility to focus on family and business growth simultaneously. A true game-changer!",
     name: "Dan Pearson",
     role: "Independent Consultant",
     image: "/images/dan.png",

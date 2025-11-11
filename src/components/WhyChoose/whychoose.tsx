@@ -24,7 +24,7 @@ const leftCards = [
   },
   {
     title: "Easy to scale",
-    text: "We specialize in ops, admin, finance and marketing talent. Many clients end up scaling with Oceans.",
+    text: "We specialize in ops, admin, finance and marketing talent. Many clients end up scaling with Talentphere.",
     icon: easy,
     rotate: -3,
   },
@@ -75,9 +75,9 @@ const WhyOceans: React.FC = () => {
         {/* Center text */}
         <div className="home-why-center">
           <div className="home-plus-icon">+</div>
-          <h2>Why Oceans</h2>
+          <h2>Why Talentphere</h2>
           <p>
-            Over 400 companies have embedded Oceans talent into their
+            Over 400 companies have embedded Talentphere talent into their
             organization.
           </p>
         </div>
