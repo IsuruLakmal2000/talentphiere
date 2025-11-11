@@ -18,8 +18,11 @@
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 40px;
-  color: white; /* Default text color */
+  color: white !important; /* Force white color */
+}
 
+.common-questions-section .section-title {
+  color: white !important;
 }
 
 /* --- Q&A List Container --- */

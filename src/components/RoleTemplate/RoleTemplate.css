@@ -1762,161 +1762,133 @@
    =========================== */
 
 .common-questions-section {
-  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1e3a5f 100%);
-  padding: 6rem 15rem;
-  margin: 0; /* No negative margin needed since page-container has no padding */
-  color: white;
+  /* Dark blue background color matching pricing page */
+  background-color: #0d2847; 
+  padding: 80px 100px;
+  color: white; /* Default text color */
+  margin: 0;
 }
 
 .questions-container {
-  max-width: 100%;
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .questions-title {
-  font-family: 'Bastia', serif;
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-  text-align: left;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: white !important;
 }
 
 .questions-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1px; /* Small gap to ensure the borders separate nicely */
 }
 
 .question-item {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 2.5rem;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 3rem;
-  align-items: start;
+  display: flex;
+  /* Use a background slightly lighter than the section for subtle contrast */
+  background-color: #123157;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Ensure the last item has a bottom border too */
+.questions-list .question-item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .question-left {
-  padding-right: 1rem;
+  /* Matches the width ratio in the screenshot */
+  flex: 0 0 35%; 
+  padding: 20px 25px;
 }
 
 .question-text {
-  font-family: 'Bastia', serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.5;
+  font-weight: 500;
+  font-size: 16px;
   margin: 0;
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
+  /* Right border to separate Question from Answer */
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding-right: 25px;
 }
 
 .question-right {
-  padding-left: 1rem;
+  /* Takes up the remaining space */
+  flex: 1; 
+  padding: 20px 25px;
 }
 
 .answer-text {
-  font-size: 1rem;
-  line-height: 1.7;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8); /* Slightly less bright white for the answer text */
   margin: 0;
-  color: rgba(255, 255, 255, 0.85);
 }
 
 /* Responsive Design for Common Questions */
 @media (max-width: 1400px) {
   .common-questions-section {
-    padding: 6rem 6rem;
-    margin: 0;
-  }
-
-  .questions-title {
-    font-size: 2.5rem;
+    padding: 80px 60px;
   }
 }
 
 @media (max-width: 1200px) {
   .common-questions-section {
-    padding: 5rem 4rem;
-    margin: 0;
+    padding: 80px 60px;
   }
 }
 
 @media (max-width: 1024px) {
   .common-questions-section {
-    padding: 5rem 3rem;
-    margin: 0;
-  }
-
-  .question-item {
-    grid-template-columns: 1fr 1.3fr;
-    gap: 2rem;
-    padding: 2rem;
-  }
-
-  .questions-title {
-    font-size: 2.2rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .question-text {
-    font-size: 1.15rem;
+    padding: 80px 40px;
   }
 }
 
 @media (max-width: 768px) {
   .common-questions-section {
-    padding: 4rem 2rem;
-    margin: 0;
+    padding: 60px 20px;
   }
 
   .question-item {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.75rem;
+    flex-direction: column;
+    border-right: none; /* Remove right border on mobile */
   }
 
-  .question-left,
-  .question-right {
-    padding: 0;
-  }
-
-  .questions-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  .question-left {
+    flex: 1; /* Question takes full width */
+    padding: 15px 20px;
   }
 
   .question-text {
-    font-size: 1.1rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a bottom separator */
+    font-weight: 600;
+    padding-right: 0;
+    padding-bottom: 15px;
   }
 
-  .answer-text {
-    font-size: 0.95rem;
+  .question-right {
+    padding: 15px 20px;
   }
 }
 
 @media (max-width: 480px) {
   .common-questions-section {
-    padding: 3rem 1rem;
-    margin: 0;
-  }
-
-  .questions-list {
-    gap: 1.5rem;
-  }
-
-  .question-item {
-    padding: 1.5rem;
+    padding: 40px 15px;
   }
 
   .questions-title {
-    font-size: 1.75rem;
+    font-size: 28px;
   }
 
-  .question-text {
-    font-size: 1rem;
-  }
-
+  .question-text,
   .answer-text {
-    font-size: 0.9rem;
+    padding: 15px 20px;
+    font-size: 15px;
   }
 }
 
