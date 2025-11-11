@@ -146,13 +146,14 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1rem;
-  align-items: start;
+  align-items: stretch; /* Changed from start to stretch */
 }
 
 .categories-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
+  height: 100%; /* Ensure full height */
 }
 
 .category-item {
@@ -194,8 +195,8 @@
 .profile-display {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 2rem;
+  align-items: stretch;
+  align-self: stretch; /* Ensure it stretches to match grid height */
 }
 
 .profile-container {
@@ -211,7 +212,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 400px;
+  height: 100%; /* Match parent height */
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -284,6 +285,7 @@
   .profiles-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
+    align-items: start; /* Reset to start on mobile */
   }
   
   .profile-display {
@@ -291,6 +293,12 @@
     justify-content: center;
     margin-bottom: 2rem;
     padding-top: 0;
+    height: auto; /* Reset height on mobile */
+  }
+  
+  .profile-container {
+    height: auto; /* Reset to auto on mobile */
+    min-height: 400px; /* Add back min-height for mobile */
   }
   
   .hero-title {
