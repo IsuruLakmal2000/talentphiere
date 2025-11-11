@@ -53,7 +53,7 @@ const CareerFormStep4: React.FC<CareerFormStep4Props> = ({
                 <circle cx="20" cy="20" r="4" fill="white"/>
               </svg>
             </div>
-            <span className="logo-text">OCEANS</span>
+            <span className="logo-text">TALENTPHERE</span>
           </div>
 
           <div className="career-form-steps">
@@ -132,7 +132,7 @@ const CareerFormStep4: React.FC<CareerFormStep4Props> = ({
                 </div>
                 <h1 className="success-heading">Application Submitted Successfully!</h1>
                 <p className="success-description">
-                  Thank you for applying to join the Oceans team! We've received your application 
+                  Thank you for applying to join the Talentphere team! We've received your application 
                   and our recruitment team will review it carefully.
                 </p>
                 <div className="success-details">
@@ -161,7 +161,7 @@ const CareerFormStep4: React.FC<CareerFormStep4Props> = ({
                     <div className="detail-icon">💬</div>
                     <div className="detail-text">
                       <strong>Questions?</strong>
-                      <span>Feel free to reach out to careers@oceans.com</span>
+                      <span>Feel free to reach out to careers@talentphere.com</span>
                     </div>
                   </div>
                 </div>

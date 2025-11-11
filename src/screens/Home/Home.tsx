@@ -13,8 +13,8 @@ const Home: React.FC = () => {
     <div>
       <Header
         title="Hire proactive global talent for your team"
-        subtitle="Outsourcing has a bad reputation. We’re fixing it with highly experienced and motivated talent, while saving you up to 80% of a US hire."
-        buttonText="Hire With Oceans"
+        subtitle="Outsourcing has a bad reputation. We're fixing it with highly experienced and motivated talent, while saving you up to 80% of a US hire."
+        buttonText="Hire With Talentphere"
         onButtonClick={() => alert("Hire button clicked!")}
       />
       <Review />

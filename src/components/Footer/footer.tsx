@@ -12,12 +12,12 @@ const FooterSection: React.FC = () => {
       {/* CTA Section */}
       <div className="footer-cta">
         <div className="footer-cta-content">
-          <img src={logo} alt="Oceans Logo" className="footer-logo" />
+          <img src={logo} alt="Talentphere Logo" className="footer-logo" />
           <h2 className="footer-heading">Start building brilliantly</h2>
           <p className="footer-description">
             We help you plug highly skilled and vetted global talent into your business, so you can focus on Building Brilliantly.
           </p>
-          <Link to="/hire-form" className="footer-button">Hire With Oceans</Link>
+          <Link to="/hire-form" className="footer-button">Hire With Talentphere</Link>
         </div>
       </div>
 
@@ -34,7 +34,7 @@ const FooterSection: React.FC = () => {
                   <circle cx="20" cy="20" r="4" fill="white"/>
                 </svg>
               </div>
-              <span className="footer-logo-text">OCEANS</span>
+              <span className="footer-logo-text">TALENTPHERE</span>
             </div>
             <p className="footer-about-text">
               Connecting exceptional global talent with forward-thinking companies. Building the future of work, one hire at a time.
@@ -93,8 +93,8 @@ const FooterSection: React.FC = () => {
             <ul className="footer-links">
               <li><Link to="/how-to-guides">How-To Guides</Link></li>
               <li><Link to="/hire-form">Hire Talent</Link></li>
-              <li><a href="mailto:hello@oceans.com">Contact Us</a></li>
-              <li><a href="mailto:support@oceans.com">Support</a></li>
+              <li><a href="mailto:hello@talentphere.com">Contact Us</a></li>
+              <li><a href="mailto:support@talentphere.com">Support</a></li>
             </ul>
           </div>
 
@@ -115,7 +115,7 @@ const FooterSection: React.FC = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-content">
           <p className="footer-copyright">
-            © {currentYear} Oceans. All rights reserved. Building brilliantly, globally.
+            © {currentYear} Talentphere. All rights reserved. Building brilliantly, globally.
           </p>
           <p className="footer-tagline">
             Connecting exceptional talent with visionary companies

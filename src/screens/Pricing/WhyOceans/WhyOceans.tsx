@@ -45,7 +45,7 @@ const WhyOceans: React.FC = () => {
     {
       icon: "📊",
       title: "Easy to scale",
-      description: "We specialize in ops, admin, finance and marketing talent. Many clients end up scaling with Oceans."
+      description: "We specialize in ops, admin, finance and marketing talent. Many clients end up scaling with Talentphere."
     },
     {
       icon: "🎯",
@@ -58,8 +58,8 @@ const WhyOceans: React.FC = () => {
     <section className="why-oceans">
       <div className="why-oceans__container">
         <div className="why-oceans__header">
-          <h2>Why Oceans</h2>
-          <p>Over 400 companies have embedded Oceans talent into their organization.</p>
+          <h2>Why Talentphere</h2>
+          <p>Over 400 companies have embedded Talentphere talent into their organization.</p>
         </div>
 
         <div className="why-oceans__content">
@@ -76,7 +76,7 @@ const WhyOceans: React.FC = () => {
             </video>
             <div className="logo-overlay">
               <div className="logo-icon">○</div>
-              <span className="logo-text">OCEANS</span>
+              <span className="logo-text">TALENTPHERE</span>
             </div>
           </div>
 

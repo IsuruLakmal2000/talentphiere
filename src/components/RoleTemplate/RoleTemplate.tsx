@@ -74,7 +74,7 @@ const RoleTemplate: React.FC<RoleTemplateProps> = ({
           
           <p className="hero-description">{heroDescription}</p>
           
-          <button className="cta-button">Hire With Oceans</button>
+          <button className="cta-button">Hire With Talentphere</button>
         </div>
       </section>
 
@@ -251,7 +251,7 @@ const RoleTemplate: React.FC<RoleTemplateProps> = ({
         </div>
       </section>
 
-      {/* Why Oceans Section */}
+      {/* Why Talentphere Section */}
       <section className="why-oceans-section">
         <div className="why-container">
           <div className="why-left">
@@ -261,11 +261,11 @@ const RoleTemplate: React.FC<RoleTemplateProps> = ({
                       fill="#1e3a8a" stroke="#1e3a8a" strokeWidth="2"/>
               </svg>
             </div>
-            <h2 className="why-title">Why Oceans</h2>
+            <h2 className="why-title">Why Talentphere</h2>
             <p className="why-subtitle">
-              Over 400 companies have embedded Oceans talent into their organization.
+              Over 400 companies have embedded Talentphere talent into their organization.
             </p>
-            <button className="why-cta-button">Hire With Oceans</button>
+            <button className="why-cta-button">Hire With Talentphere</button>
           </div>
 
           <div className="why-right">
@@ -323,7 +323,7 @@ const RoleTemplate: React.FC<RoleTemplateProps> = ({
                 </div>
                 <h3 className="benefit-title">Easy to scale</h3>
                 <p className="benefit-text">
-                  We specialize in ops, admin, finance and marketing talent. Many clients end up scaling with Oceans.
+                  We specialize in ops, admin, finance and marketing talent. Many clients end up scaling with Talentphere.
                 </p>
               </div>
 
@@ -365,11 +365,11 @@ const RoleTemplate: React.FC<RoleTemplateProps> = ({
           <div className="questions-list">
             <div className="question-item">
               <div className="question-left">
-                <h3 className="question-text">Is my Oceans Diver a full time employee?</h3>
+                <h3 className="question-text">Is my Talentphere Diver a full time employee?</h3>
               </div>
               <div className="question-right">
                 <p className="answer-text">
-                  Nope, they work for Oceans — but spend all their time with you. 
+                  Nope, they work for Talentphere — but spend all their time with you. 
                   You should treat them as if they were a full time, long-term member of your team.
                 </p>
               </div>
@@ -402,11 +402,11 @@ const RoleTemplate: React.FC<RoleTemplateProps> = ({
 
             <div className="question-item">
               <div className="question-left">
-                <h3 className="question-text">How many Divers can Oceans help me hire?</h3>
+                <h3 className="question-text">How many Divers can Talentphere help me hire?</h3>
               </div>
               <div className="question-right">
                 <p className="answer-text">
-                  If there's a ceiling, we don't know about it! Oceans can help you scale to as many as you need. 
+                  If there's a ceiling, we don't know about it! Talentphere can help you scale to as many as you need. 
                   Some of our clients have built out full functions consisting of 10+ Divers.
                 </p>
               </div>

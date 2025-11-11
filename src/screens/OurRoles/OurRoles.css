@@ -18,7 +18,8 @@
 .page-container {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
   min-height: 100vh;
-  padding: 0 15rem; /* Add consistent page padding */
+  padding: 0 15rem;
+  overflow-x: hidden;
 }
 
 /* Hero Section - Ocean Talent Style */
@@ -612,9 +613,9 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 6rem 15rem;
+  padding: 6rem 0;
   background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1e3a5f 100%);
-  margin: 0 -15rem; /* Break out of page container padding */
+  margin: 0;
 }
 
 .how-container {
@@ -625,6 +626,7 @@
 .how-header {
   text-align: center;
   margin-bottom: 4rem;
+  padding: 0 15rem;
 }
 
 .how-title {
@@ -646,18 +648,17 @@
 
 .steps-carousel {
   position: relative;
-  overflow: visible; /* Changed to visible to show cards extending beyond */
-  padding: 0; /* Remove padding */
-  margin: 0 -15rem; /* Break out of container */
-  padding: 0 15rem; /* Add back as padding to position content */
+  overflow: hidden;
+  padding: 0 15rem;
+  margin: 0;
 }
 
 .steps-track {
-  display: flex; /* Changed from grid to flex for carousel */
+  display: flex;
   gap: 2rem;
   transition: transform 0.5s ease;
   width: 100%;
-  padding-right: 15rem; /* Add right padding to show peek of next cards */
+  padding-right: 0;
 }
 
 .step-card {
@@ -730,6 +731,7 @@
   justify-content: center;
   gap: 1rem;
   margin-top: 3rem;
+  padding: 0 15rem;
 }
 
 .carousel-btn {
@@ -764,18 +766,26 @@
 /* Responsive Design for How We Do It Section */
 @media (max-width: 1400px) {
   .how-we-do-it-section {
-    padding: 6rem 6rem;
-    margin: 0 -6rem;
+    padding: 6rem 0;
+    margin: 0;
+  }
+  
+  .how-header {
+    padding: 0 6rem;
   }
   
   .steps-carousel {
-    margin: 0 -6rem;
+    margin: 0;
+    padding: 0 6rem;
+  }
+  
+  .carousel-controls {
     padding: 0 6rem;
   }
   
   .steps-track {
     gap: 1.5rem;
-    padding-right: 6rem;
+    padding-right: 0;
   }
   
   .step-card {
@@ -786,17 +796,25 @@
 
 @media (max-width: 1200px) {
   .how-we-do-it-section {
-    padding: 5rem 4rem;
-    margin: 0 -4rem;
+    padding: 5rem 0;
+    margin: 0;
+  }
+  
+  .how-header {
+    padding: 0 4rem;
   }
   
   .steps-carousel {
-    margin: 0 -4rem;
+    margin: 0;
+    padding: 0 4rem;
+  }
+  
+  .carousel-controls {
     padding: 0 4rem;
   }
   
   .steps-track {
-    padding-right: 4rem;
+    padding-right: 0;
   }
   
   .step-card {
@@ -807,8 +825,12 @@
 
 @media (max-width: 1024px) {
   .how-we-do-it-section {
-    padding: 4rem 3rem;
-    margin: 0 -3rem;
+    padding: 4rem 0;
+    margin: 0;
+  }
+  
+  .how-header {
+    padding: 0 3rem;
   }
   
   .how-title {
@@ -816,9 +838,13 @@
   }
   
   .steps-carousel {
-    margin: 0 -3rem;
+    margin: 0;
     padding: 0 3rem;
     overflow: hidden;
+  }
+  
+  .carousel-controls {
+    padding: 0 3rem;
   }
   
   .steps-track {
@@ -842,8 +868,12 @@
 
 @media (max-width: 768px) {
   .how-we-do-it-section {
-    padding: 4rem 2rem;
-    margin: 0 -2rem;
+    padding: 4rem 0;
+    margin: 0;
+  }
+  
+  .how-header {
+    padding: 0 2rem;
   }
   
   .how-title {
@@ -855,9 +885,13 @@
   }
   
   .steps-carousel {
-    margin: 0 -2rem;
+    margin: 0;
     padding: 0 2rem;
     overflow: hidden;
+  }
+  
+  .carousel-controls {
+    padding: 0 2rem;
   }
   
   .steps-track {
@@ -894,8 +928,12 @@
 
 @media (max-width: 480px) {
   .how-we-do-it-section {
-    padding: 3rem 1rem;
-    margin: 0 -1rem;
+    padding: 3rem 0;
+    margin: 0;
+  }
+  
+  .how-header {
+    padding: 0 1rem;
   }
   
   .how-title {
@@ -908,7 +946,11 @@
   }
   
   .steps-carousel {
-    margin: 0 -1rem;
+    margin: 0;
+    padding: 0 1rem;
+  }
+  
+  .carousel-controls {
     padding: 0 1rem;
   }
   
@@ -1755,7 +1797,7 @@
 .common-questions-section {
   background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1e3a5f 100%);
   padding: 6rem 15rem;
-  margin: 0 -15rem; /* Break out of page container padding */
+  margin: 0;
   color: white;
 }
 
@@ -1816,7 +1858,7 @@
 @media (max-width: 1400px) {
   .common-questions-section {
     padding: 6rem 6rem;
-    margin: 0 -6rem;
+    margin: 0;
   }
 
   .questions-title {
@@ -1827,14 +1869,14 @@
 @media (max-width: 1200px) {
   .common-questions-section {
     padding: 5rem 4rem;
-    margin: 0 -4rem;
+    margin: 0;
   }
 }
 
 @media (max-width: 1024px) {
   .common-questions-section {
     padding: 5rem 3rem;
-    margin: 0 -3rem;
+    margin: 0;
   }
 
   .question-item {
@@ -1856,7 +1898,7 @@
 @media (max-width: 768px) {
   .common-questions-section {
     padding: 4rem 2rem;
-    margin: 0 -2rem;
+    margin: 0;
   }
 
   .question-item {
@@ -1887,7 +1929,7 @@
 @media (max-width: 480px) {
   .common-questions-section {
     padding: 3rem 1rem;
-    margin: 0 -1rem;
+    margin: 0;
   }
 
   .questions-list {
@@ -1922,7 +1964,7 @@
   align-items: center;
   justify-content: center;
   padding: 6rem 15rem;
-  margin: 0 -15rem; /* Break out of page container padding */
+  margin: 0;
 }
 
 .final-cta-container {
@@ -1995,14 +2037,14 @@
 @media (max-width: 1400px) {
   .final-cta-section {
     padding: 6rem 6rem;
-    margin: 0 -6rem;
+    margin: 0;
   }
 }
 
 @media (max-width: 1200px) {
   .final-cta-section {
     padding: 5rem 4rem;
-    margin: 0 -4rem;
+    margin: 0;
   }
 }
 
@@ -2010,7 +2052,7 @@
   .final-cta-section {
     min-height: 70vh;
     padding: 5rem 3rem;
-    margin: 0 -3rem;
+    margin: 0;
   }
 
   .final-cta-title {
@@ -2026,7 +2068,7 @@
   .final-cta-section {
     min-height: 60vh;
     padding: 4rem 2rem;
-    margin: 0 -2rem;
+    margin: 0;
   }
 
   .final-cta-icon svg {
@@ -2052,7 +2094,7 @@
   .final-cta-section {
     min-height: 55vh;
     padding: 3rem 1rem;
-    margin: 0 -1rem;
+    margin: 0;
   }
 
   .final-cta-icon svg {

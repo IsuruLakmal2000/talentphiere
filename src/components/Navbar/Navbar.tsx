@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
                 <path d="M12 7C9.5 7 7.5 9 7.5 11.5C7.5 14 9.5 16 12 16C14.5 16 16.5 14 16.5 11.5C16.5 9 14.5 7 12 7Z" fill="white"/>
               </svg>
             </div>
-            <span className="logo-text">OCEANS</span>
+            <span className="logo-text">TALENTPHERE</span>
           </Link>
 
           <ul className="navbar-menu">
@@ -162,7 +162,7 @@ const Navbar: React.FC = () => {
             </li>
           </ul>
 
-          <Link to="/hire" className="navbar-cta">Hire With Oceans</Link>
+          <Link to="/hire" className="navbar-cta">Hire With Talentphere</Link>
         </div>
       </div>
     </nav>

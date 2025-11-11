@@ -48,7 +48,7 @@ const HireFormStep1: React.FC<HireFormStep1Props> = ({ onNext, initialData }) =>
                 <circle cx="20" cy="20" r="4" fill="white"/>
               </svg>
             </div>
-            <span className="logo-text">OCEANS</span>
+            <span className="logo-text">TALENTPHERE</span>
           </div>
 
           <div className="hire-form-steps">
@@ -72,7 +72,7 @@ const HireFormStep1: React.FC<HireFormStep1Props> = ({ onNext, initialData }) =>
               <div className="step-number">3</div>
               <div className="step-content">
                 <h3 className="step-title">Book a quick chat</h3>
-                <p className="step-description">Get personalized answers about Oceans from our team</p>
+                <p className="step-description">Get personalized answers about Talentphere from our team</p>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@ const HireFormStep1: React.FC<HireFormStep1Props> = ({ onNext, initialData }) =>
                   value={formData.workEmail}
                   onChange={handleChange}
                   className="form-input"
-                  placeholder="zale@oceansxyz.com"
+                  placeholder="zale@talentphere.com"
                   required
                 />
               </div>

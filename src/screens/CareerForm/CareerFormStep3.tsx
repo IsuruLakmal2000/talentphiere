@@ -106,7 +106,7 @@ const CareerFormStep3: React.FC<CareerFormStep3Props> = ({ onNext, onBack, initi
                 <circle cx="20" cy="20" r="4" fill="white"/>
               </svg>
             </div>
-            <span className="logo-text">OCEANS</span>
+            <span className="logo-text">TALENTPHERE</span>
           </div>
 
           <div className="career-form-steps">
@@ -302,7 +302,7 @@ const CareerFormStep3: React.FC<CareerFormStep3Props> = ({ onNext, onBack, initi
                   value={formData.coverLetter}
                   onChange={handleChange}
                   className="form-textarea"
-                  placeholder="Share your experience, achievements, and what excites you about joining Oceans..."
+                  placeholder="Share your experience, achievements, and what excites you about joining Talentphere..."
                   rows={6}
                   required
                 />

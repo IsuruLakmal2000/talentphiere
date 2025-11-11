@@ -37,7 +37,7 @@ const Guides: React.FC = () => {
     <>
       <Header title="Grow Your Business with Global Talent" subtitle="Practical playbooks and resources designed to help you maximize
             communication, workflow, and success."
-            buttonText="Hire with OCEANS" />
+            buttonText="Hire with TALENTPHERE" />
 
       
       {/* Guides Grid */}

@@ -7,7 +7,11 @@
     rgba(224, 241, 248, 1) 70%
   );
   text-align: center;
-  padding: 90px 20px 120px 20px; /* Adjusted top padding for fixed navbar */
+  min-height: 80vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 20px 60px 20px; /* Adjusted padding for fixed navbar */
   font-family: "Inter", sans-serif;
   color: #0a3854;
   position: relative;

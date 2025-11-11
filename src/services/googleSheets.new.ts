@@ -105,7 +105,7 @@ export async function submitCareerForm(data: CareerFormData): Promise<SubmitResp
     console.error('Error submitting career form:', error);
     return {
       success: false,
-      message: 'Failed to submit application. Please try again or contact us directly at careers@oceans.com.',
+      message: 'Failed to submit application. Please try again or contact us directly at careers@talentphere.com.',
       error: error instanceof Error ? error.message : 'Unknown error',
       timestamp: new Date().toISOString()
     };

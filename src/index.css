@@ -35,6 +35,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #ffffff;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Apply Bastia font to all headers and section titles */

@@ -52,7 +52,7 @@ const CareerFormStep1: React.FC<CareerFormStep1Props> = ({ onNext, initialData }
                 <circle cx="20" cy="20" r="4" fill="white"/>
               </svg>
             </div>
-            <span className="logo-text">OCEANS</span>
+            <span className="logo-text">TALENTPHERE</span>
           </div>
 
           <div className="career-form-steps">
@@ -93,7 +93,7 @@ const CareerFormStep1: React.FC<CareerFormStep1Props> = ({ onNext, initialData }
         {/* Right Side - Form */}
         <div className="career-form-right">
           <div className="form-content">
-            <h1 className="form-heading">Start Your Journey With Oceans</h1>
+            <h1 className="form-heading">Start Your Journey With Talentphere</h1>
             <p className="form-subheading">Let's begin with your basic information</p>
 
             <form onSubmit={handleSubmit}>

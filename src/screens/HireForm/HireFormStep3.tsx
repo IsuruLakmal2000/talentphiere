@@ -52,7 +52,7 @@ const HireFormStep3: React.FC<HireFormStep3Props> = ({
                 <circle cx="20" cy="20" r="4" fill="white"/>
               </svg>
             </div>
-            <span className="logo-text">OCEANS</span>
+            <span className="logo-text">TALENTPHERE</span>
           </div>
 
           <div className="hire-form-steps">
@@ -141,7 +141,7 @@ const HireFormStep3: React.FC<HireFormStep3Props> = ({
                     <div className="detail-icon">💬</div>
                     <div className="detail-text">
                       <strong>Questions?</strong>
-                      <span>Feel free to reach out to us at hello@oceans.com</span>
+                      <span>Feel free to reach out to us at hello@talentphere.com</span>
                     </div>
                   </div>
                 </div>

@@ -53,7 +53,7 @@ const CareerFormStep2: React.FC<CareerFormStep2Props> = ({ onNext, onBack, initi
                 <circle cx="20" cy="20" r="4" fill="white"/>
               </svg>
             </div>
-            <span className="logo-text">OCEANS</span>
+            <span className="logo-text">TALENTPHERE</span>
           </div>
 
           <div className="career-form-steps">

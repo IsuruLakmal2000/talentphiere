@@ -1,7 +1,7 @@
 /**
- * OCEANS CAREER FORM GOOGLE APPS SCRIPT
+ * TALENTPHERE CAREER FORM GOOGLE APPS SCRIPT
  * 
- * This script handles submissions from the Oceans Career Application Form
+ * This script handles submissions from the Talentphere Career Application Form
  * It saves data to Google Sheets and optionally sends email notifications
  * 
  * SETUP INSTRUCTIONS:
@@ -9,7 +9,7 @@
  * 
  * 1. Open your existing Google Spreadsheet OR create a new one:
  *    - If creating new: Go to https://sheets.google.com and create a spreadsheet
- *    - Name it "Oceans Career Applications" or use your existing spreadsheet
+ *    - Name it "Talentphere Career Applications" or use your existing spreadsheet
  *    - Copy the Spreadsheet ID from the URL:
  *      https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit
  * 
@@ -28,7 +28,7 @@
  *    - Click the gear icon next to "Select type"
  *    - Choose "Web app"
  *    - Fill in:
- *      - Description: "Oceans Career Form Handler"
+ *      - Description: "Talentphere Career Form Handler"
  *      - Execute as: Me
  *      - Who has access: Anyone
  *    - Click "Deploy"
