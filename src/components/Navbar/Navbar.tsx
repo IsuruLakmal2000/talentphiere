@@ -65,7 +65,6 @@ const Navbar: React.FC = () => {
               {openDropdown === 'resources' && (
                 <div className="dropdown-menu">
                   <Link to="success-story" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
-                    <div className="dropdown-item-icon">🏆</div>
                     <div className="dropdown-item-content">
                       <div className="dropdown-item-title">Success Stories</div>
                       <div className="dropdown-item-description">Find Our Success Stories</div>
@@ -73,7 +72,6 @@ const Navbar: React.FC = () => {
                   </Link>
 
                   <Link to="how-to-guide" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
-                    <div className="dropdown-item-icon">📘</div>
                     <div className="dropdown-item-content">
                       <div className="dropdown-item-title">How To Guide</div>
                       <div className="dropdown-item-description">Step by Step Guidance</div>
@@ -111,7 +109,6 @@ const Navbar: React.FC = () => {
               {openDropdown === 'roles' && (
                 <div className="dropdown-menu">
                   <Link to="/roles/executive-assistant" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
-                    <div className="dropdown-item-icon">👔</div>
                     <div className="dropdown-item-content">
                       <div className="dropdown-item-title">Executive Assistant</div>
                       <div className="dropdown-item-description">EA+ designed for founders</div>
@@ -119,7 +116,6 @@ const Navbar: React.FC = () => {
                   </Link>
 
                   <Link to="/roles/software-development" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
-                    <div className="dropdown-item-icon">💻</div>
                     <div className="dropdown-item-content">
                       <div className="dropdown-item-title">Development & Innovation</div>
                       <div className="dropdown-item-description">Experienced developers for startups</div>
@@ -127,7 +123,6 @@ const Navbar: React.FC = () => {
                   </Link>
 
                   <Link to="/roles/infrastructure-operations" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
-                    <div className="dropdown-item-icon">⚙️</div>
                     <div className="dropdown-item-content">
                       <div className="dropdown-item-title">Infrastructure & Operations</div>
                       <div className="dropdown-item-description">DevOps, cloud, and SRE experts</div>
@@ -135,7 +130,6 @@ const Navbar: React.FC = () => {
                   </Link>
 
                   <Link to="/roles/digital-marketing-growth" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
-                    <div className="dropdown-item-icon">📈</div>
                     <div className="dropdown-item-content">
                       <div className="dropdown-item-title">Digital Marketing & Growth</div>
                       <div className="dropdown-item-description">Performance marketing and growth experts</div>
@@ -143,7 +137,6 @@ const Navbar: React.FC = () => {
                   </Link>
 
                   <Link to="/roles/brand-strategy" className="dropdown-item" onClick={() => setOpenDropdown(null)}>
-                    <div className="dropdown-item-icon">🎨</div>
                     <div className="dropdown-item-content">
                       <div className="dropdown-item-title">Brand & Strategy</div>
                       <div className="dropdown-item-description">Strategic brand and creative professionals</div>
