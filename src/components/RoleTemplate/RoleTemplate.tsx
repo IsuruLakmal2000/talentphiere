@@ -10,6 +10,7 @@ interface CategoryItem {
 interface ProfileData {
   name: string;
   subtitle: string;
+  image: string; // Path to the profile image
 }
 
 interface RoleTemplateProps {
@@ -100,12 +101,8 @@ const RoleTemplate: React.FC<RoleTemplateProps> = ({
             </div>
 
             <div className="profile-display">
-              <div className="profile-container">
-                <div className="profile-image">
-                  <div className="image-placeholder">
-                    <div className="avatar-placeholder"></div>
-                  </div>
-                </div>
+              <div className="profile-container" style={{ backgroundImage: `url(${profileData.image})` }}>
+                <div className="profile-overlay"></div>
                 <div className="profile-details">
                   <h4 className="profile-name">{profileData.name}</h4>
                   <p className="profile-subtitle">{profileData.subtitle}</p>

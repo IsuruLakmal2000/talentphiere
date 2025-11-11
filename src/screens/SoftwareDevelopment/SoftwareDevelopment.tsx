@@ -1,5 +1,6 @@
 import React from 'react';
 import { RoleTemplate } from '../../components/RoleTemplate';
+import manImage from '../../assets/images/man.jpg';
 
 const SoftwareDevelopment: React.FC = () => {
   const heroTitle = "Development & Innovation Talent for Modern Teams";
@@ -41,7 +42,8 @@ const SoftwareDevelopment: React.FC = () => {
 
   const profileData = {
     name: "Rajesh",
-    subtitle: "IIT Bombay, 8+ years exp"
+    subtitle: "IIT Bombay, 8+ years exp",
+    image: manImage
   };
 
   return (

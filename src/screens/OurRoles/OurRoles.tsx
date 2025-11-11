@@ -1,5 +1,6 @@
 import React from 'react';
 import { RoleTemplate } from '../../components/RoleTemplate';
+import womanImage from '../../assets/images/woman.jpg';
 
 const OurRoles: React.FC = () => {
   const heroTitle = "Hire an EA that's designed for Founders";
@@ -37,7 +38,8 @@ const OurRoles: React.FC = () => {
 
   const profileData = {
     name: "Nihara",
-    subtitle: "University of Essex"
+    subtitle: "University of Essex",
+    image: womanImage
   };
 
   return (

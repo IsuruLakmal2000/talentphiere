@@ -1,5 +1,6 @@
 import React from 'react';
 import { RoleTemplate } from '../../components/RoleTemplate';
+import womanImage from '../../assets/images/woman.jpg';
 
 const DigitalMarketingGrowth: React.FC = () => {
   const heroTitle = "Digital Marketing & Growth Experts Who Drive Results";
@@ -41,7 +42,8 @@ const DigitalMarketingGrowth: React.FC = () => {
 
   const profileData = {
     name: "Anjali",
-    subtitle: "IIM Bangalore, 9+ years exp"
+    subtitle: "IIM Bangalore, 9+ years exp",
+    image: womanImage
   };
 
   return (
