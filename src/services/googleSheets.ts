@@ -1,7 +1,13 @@
 // Google Sheets API Service
-// Replace these URLs with your actual Google Apps Script Web App URLs after deployment
-const HIRE_FORM_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyl2TAC332KpwvYKgcvgDGW6qVtVy4mqeK3-AYGoRHSoSVcFdlDKF5Vjfxh-xjsMRUb/exec';
-const CAREER_FORM_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyA1gGq20jOr1fTGcASH-7ogkUTwGct3GQyaolN4uyIQkvRwqxDe9FkbbiBA9XaBWLHnQ/exec';
+//These links for my id13 personal scripts.
+// const HIRE_FORM_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyl2TAC332KpwvYKgcvgDGW6qVtVy4mqeK3-AYGoRHSoSVcFdlDKF5Vjfxh-xjsMRUb/exec';
+// const CAREER_FORM_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyA1gGq20jOr1fTGcASH-7ogkUTwGct3GQyaolN4uyIQkvRwqxDe9FkbbiBA9XaBWLHnQ/exec';
+
+
+// prod scripts link
+const HIRE_FORM_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbysslVf9drDMX8kDHN2hdxqV9mcobRGTnYSsr4BvaIXkIMiRs_1XdgMMlTMpEFQfWjbXQ/exec";
+const CAREER_FORM_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbx2wUJmDMYcCeQnaANxaU-PGbazngDsqytjJiVbNt92i2L6C--3gnZI0CqWC3ADXvy5/exec";
+
 
 export interface HireFormData {
   // Step 1
