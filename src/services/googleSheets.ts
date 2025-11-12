@@ -5,7 +5,7 @@
 
 
 // prod scripts link
-const HIRE_FORM_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbysslVf9drDMX8kDHN2hdxqV9mcobRGTnYSsr4BvaIXkIMiRs_1XdgMMlTMpEFQfWjbXQ/exec";
+const HIRE_FORM_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbz_5J9BfA2-XzjRVz6roBy5RnaZFSsrI4Tk6KIzdQ0J9O_CDHAg68xCwrc-MVxaHoVNHQ/exec";
 const CAREER_FORM_SCRIPT_URL ="https://script.google.com/macros/s/AKfycbx2wUJmDMYcCeQnaANxaU-PGbazngDsqytjJiVbNt92i2L6C--3gnZI0CqWC3ADXvy5/exec";
 
 

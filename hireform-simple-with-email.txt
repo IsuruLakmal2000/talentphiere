@@ -1,0 +1,165 @@
+// Google Apps Script for Hire Form with Email Notifications
+// Replace with your actual Google Sheet ID and Admin Email
+const SPREADSHEET_ID = '1KCKmyobKOS1p91N9l6sNiXu1vC1JPRYxQnIYN4BPx7Y';
+const ADMIN_EMAIL = 'info.talentphere@gmail.com'; // Update this to your admin email
+
+function doPost(e) {
+  try {
+    // Parse the JSON data from the request
+    const data = JSON.parse(e.postData.contents);
+    
+    // Open the spreadsheet
+    const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getActiveSheet();
+    
+    // Prepare the row data based on the new hire form structure
+    const rowData = [
+      new Date(), // Timestamp
+      // Step 1 data
+      data.firstName || '',
+      data.lastName || '',
+      data.workEmail || '',
+      // Step 2 data
+      data.companyName || '',
+      data.companyWebsite || '',
+      data.yourTitle || '',
+      data.industry || '',
+      data.howDidYouHear || '',
+      Array.isArray(data.lookingFor) ? data.lookingFor.join(', ') : (data.lookingFor || '')
+    ];
+    
+    // Add the row to the sheet
+    sheet.appendRow(rowData);
+    
+    // Send email notification - NEW ADDITION
+    sendEmailNotification(data);
+    
+    // Return success response
+    const output = ContentService.createTextOutput(JSON.stringify({
+      success: true,
+      message: 'Form submitted successfully! We will contact you soon.',
+      timestamp: new Date().toISOString()
+    }));
+    
+    output.setMimeType(ContentService.MimeType.JSON);
+    return output;
+      
+  } catch (error) {
+    // Return error response
+    const output = ContentService.createTextOutput(JSON.stringify({
+      success: false,
+      error: error.toString(),
+      message: 'Failed to submit form. Please try again.',
+      timestamp: new Date().toISOString()
+    }));
+    
+    output.setMimeType(ContentService.MimeType.JSON);
+    return output;
+  }
+}
+
+// Handle GET requests (for testing)
+function doGet(e) {
+  const output = ContentService.createTextOutput(JSON.stringify({
+    status: 'Google Apps Script is running',
+    timestamp: new Date().toISOString(),
+    message: 'Use POST method to submit form data',
+    expectedFields: [
+      'firstName',
+      'lastName', 
+      'workEmail',
+      'companyName',
+      'companyWebsite',
+      'yourTitle',
+      'industry',
+      'howDidYouHear',
+      'lookingFor (array)'
+    ]
+  }));
+  
+  output.setMimeType(ContentService.MimeType.JSON);
+  return output;
+}
+
+/**
+ * Send email notification to admin - NEW FUNCTION
+ */
+function sendEmailNotification(data) {
+  try {
+    const subject = `New Hire Form Submission: ${data.companyName} - ${data.firstName} ${data.lastName}`;
+    
+    const body = `
+New Hire Form Submission Received
+=================================
+
+CONTACT INFORMATION:
+--------------------
+Name: ${data.firstName} ${data.lastName}
+Work Email: ${data.workEmail}
+
+COMPANY INFORMATION:
+--------------------
+Company Name: ${data.companyName}
+Company Website: ${data.companyWebsite || 'Not provided'}
+Your Title: ${data.yourTitle}
+Industry: ${data.industry}
+
+ADDITIONAL DETAILS:
+-------------------
+How Did You Hear About Us: ${data.howDidYouHear}
+Looking For: ${Array.isArray(data.lookingFor) ? data.lookingFor.join(', ') : data.lookingFor}
+
+=================================
+Submitted: ${new Date().toLocaleString()}
+
+View all hire form submissions: ${SpreadsheetApp.openById(SPREADSHEET_ID).getUrl()}
+    `;
+    
+    // Send email notification
+    MailApp.sendEmail({
+      to: ADMIN_EMAIL,
+      subject: subject,
+      body: body
+    });
+    
+    Logger.log('Email notification sent for hire form submission: ' + data.companyName);
+  } catch (error) {
+    console.error('Error sending email notification:', error);
+    // Don't throw error - form submission should still succeed even if email fails
+  }
+}
+
+/* 
+GOOGLE SHEET SETUP:
+Make sure your Google Sheet has the following column headers in Row 1:
+1. Timestamp
+2. First Name
+3. Last Name
+4. Work Email
+5. Company Name
+6. Company Website
+7. Your Title
+8. Industry
+9. How Did You Hear
+10. Looking For
+
+SETUP INSTRUCTIONS:
+===================
+
+1. Update ADMIN_EMAIL with your actual admin email address
+2. The script will send notifications to this email for each submission
+
+3. After updating this script in Apps Script:
+   - Click "Deploy" > "New deployment"
+   - Select type: "Web app"
+   - Execute as: "Me"
+   - Who has access: "Anyone"
+   - Click "Deploy"
+   - Copy the Web App URL
+   - Update the HIRE_FORM_SCRIPT_URL in your React app
+
+4. PERMISSIONS:
+   - The first time you run this script, it will ask for permissions to:
+     - Access Google Sheets
+     - Send emails
+   - Grant these permissions for the script to work properly
+*/
