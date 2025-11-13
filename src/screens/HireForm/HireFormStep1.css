@@ -304,13 +304,16 @@ form {
 
 @media (max-width: 992px) {
   .hire-form-container {
-    padding: 1.5rem;
+    padding: 0;
+    height: auto;
+    min-height: 100vh;
   }
 
   .hire-form-wrapper {
     grid-template-columns: 1fr;
-    max-width: 600px;
+    max-width: 100%;
     min-height: auto;
+    border-radius: 0;
   }
 
   .hire-form-left {
@@ -344,15 +347,24 @@ form {
   .step-description {
     font-size: 0.8125rem;
   }
+
+  .form-content {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
   .hire-form-container {
-    padding: 1rem;
+    padding: 0;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
   }
 
   .hire-form-wrapper {
-    border-radius: 16px;
+    border-radius: 0;
+    min-height: auto;
+    max-width: 100%;
   }
 
   .hire-form-left {
@@ -369,41 +381,77 @@ form {
   }
 
   .form-heading {
-    font-size: 2.25rem;
-    margin-bottom: 1.75rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+
+  .form-content {
+    max-width: 100%;
+    width: 100%;
   }
 
   .form-row {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
-  .form-input {
-    padding: 0.8125rem 1rem;
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  .form-input,
+  .form-select {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
   }
 
   .form-submit-btn {
-    padding: 0.9375rem 2.75rem;
+    padding: 0.9375rem 2rem;
     font-size: 1rem;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .form-back-btn,
+  .form-buttons .form-submit-btn {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+  }
+
+  .step-item {
+    padding: 0.875rem;
+  }
+
+  .step-number {
+    width: 38px;
+    height: 38px;
   }
 }
 
 @media (max-width: 480px) {
   .hire-form-container {
-    padding: 0.5rem;
+    padding: 0;
+    overflow-y: auto;
   }
 
   .hire-form-wrapper {
-    border-radius: 14px;
+    border-radius: 0;
   }
 
   .hire-form-left {
-    padding: 1.75rem 1.25rem;
-    gap: 1.75rem;
+    padding: 1.5rem 1.25rem;
+    gap: 1.5rem;
   }
 
   .hire-form-right {
-    padding: 1.75rem 1.25rem;
+    padding: 1.5rem 1.25rem;
   }
 
   .logo-text {
@@ -411,33 +459,44 @@ form {
   }
 
   .form-heading {
-    font-size: 1.875rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .form-row {
+    gap: 1rem;
   }
 
   .form-label {
-    font-size: 0.8125rem;
-  }
-
-  .form-input {
-    padding: 0.75rem 0.9375rem;
     font-size: 0.875rem;
   }
 
+  .form-input,
+  .form-select {
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+  }
+
   .form-submit-btn {
-    padding: 0.875rem 2.25rem;
-    font-size: 0.9375rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .form-back-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
     width: 100%;
   }
 
   .step-number {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
     font-size: 0.9375rem;
   }
 
   .step-title {
-    font-size: 1rem;
+    font-size: 0.9375rem;
   }
 
   .step-description {
@@ -445,6 +504,42 @@ form {
   }
 
   .hire-form-steps {
-    gap: 1.25rem;
+    gap: 1rem;
+  }
+
+  .step-item {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hire-form-left {
+    padding: 1.25rem 1rem;
+  }
+
+  .hire-form-right {
+    padding: 1.25rem 1rem;
+  }
+
+  .form-heading {
+    font-size: 1.5rem;
+  }
+
+  .logo-text {
+    font-size: 1.125rem;
+  }
+
+  .step-title {
+    font-size: 0.875rem;
+  }
+
+  .step-description {
+    font-size: 0.6875rem;
+  }
+
+  .form-input,
+  .form-select {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9375rem;
   }
 }
