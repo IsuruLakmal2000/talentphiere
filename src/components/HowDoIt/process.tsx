@@ -1,34 +1,40 @@
 import React from "react";
 import "./process.css";
 
+//import graphical icons
+import discoveryIcon from "../../assets/icons/search.png";
+import match from "../../assets/icons/match.png";
+import onboarding from "../../assets/icons/onboarding.png";
+import partnership from "../../assets/icons/partnership.png";
+
 const steps = [
   {
     id: 1,
     title: "Discovery Call",
     description:
       "Let's get to know each other. If it feels ready, we can deep dive into identifying the challenges facing your team, your goals, and requirements to identify the best roles for a great working relationship.",
-    icon: "/icons/discovery.svg",
+    icon: discoveryIcon,
   },
   {
     id: 2,
     title: "Matching",
     description:
       "We’ll go through existing top local, and internal talent to match you with the right fit. Over 90% of our placements come from pre-vetted talent in our pool of professionals.",
-    icon: "/icons/matching.svg",
+    icon: match,
   },
   {
     id: 3,
     title: "Onboarding",
     description:
       "Seamlessly integrate them into your processes. We share handover materials, assist in goal planning, and support during onboarding to ensure a strong start.",
-    icon: "/icons/onboarding.svg",
+    icon: onboarding,
   },
   {
     id: 4,
     title: "Long-term Partnership",
     description:
       "Once talent starts with your team, we help maintain a solid relationship and ensure continued success through review calls, follow-ups, and long-term collaboration.",
-    icon: "/icons/partnership.svg",
+    icon: partnership,
   },
 ];
 
