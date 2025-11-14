@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./HomeReview.css";
+import megaphone from "../../assets/icons/megaphone.png";
 
 interface Story {
   industry: string;
@@ -59,11 +60,13 @@ const SuccessStories: React.FC = () => {
   return (
     <section className="success-section">
       <div className="success-header">
+        <div className="header-icon">
         <img
-          src="/icons/megaphone.svg"
+          src={megaphone}
           alt="Megaphone"
           className="header-icon"
         />
+        </div>
         <h2>Want to see real client stories?</h2>
         <p>
           Our clients come from a range of different industries. Here are some
