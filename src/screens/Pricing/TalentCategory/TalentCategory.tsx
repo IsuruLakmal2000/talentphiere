@@ -18,12 +18,12 @@ interface Talent {
 }
 
 const talentData: Talent[] = [
-  { id: 1, name: 'Demetri', initial: 'P.', experience: 7, university: 'Swinburne University of Technology', company: 'MAS Holdings', category: 'Executive Assistant+', imageUrl: 'image-url-1.jpg' },
-  { id: 2, name: 'Pasini', initial: 'W.', experience: 6, university: 'City University of New York', company: 'Ogilvy Public Relations', category: 'Finance', imageUrl: 'image-url-2.jpg' },
-  { id: 3, name: 'Anjalie', initial: 'R.', experience: 7, university: 'University of Plymouth', company: 'Third Space Global', category: 'Operations', imageUrl: 'image-url-3.jpg' },
-  { id: 4, name: 'John', initial: 'D.', experience: 5, university: 'Stanford University', company: 'Tech Solutions', category: 'Marketing', imageUrl: 'image-url-4.jpg' },
-  { id: 5, name: 'Emma', initial: 'S.', experience: 8, university: 'MIT', company: 'Global Finance Co.', category: 'Finance', imageUrl: 'image-url-5.jpg' },
-  { id: 6, name: 'Chris', initial: 'B.', experience: 6, university: 'London School of Economics', company: 'Future Ops', category: 'Operations', imageUrl: 'image-url-6.jpg' },
+  { id: 1, name: 'Demetri', initial: 'P.', experience: 7, university: 'Swinburne University of Technology', company: 'MAS Holdings', category: 'Executive Assistant+', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ68xCJyjzwUC0J89fXPOkmIvW09vTZjHRkVg&s' },
+  { id: 2, name: 'Pasini', initial: 'W.', experience: 6, university: 'City University of New York', company: 'Ogilvy Public Relations', category: 'Finance', imageUrl: 'https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww' },
+  { id: 3, name: 'Anjalie', initial: 'R.', experience: 7, university: 'University of Plymouth', company: 'Third Space Global', category: 'Operations', imageUrl: 'https://www.shutterstock.com/image-photo/portrait-young-african-businesswoman-smiling-260nw-725292427.jpg' },
+  { id: 4, name: 'John', initial: 'D.', experience: 5, university: 'Stanford University', company: 'Tech Solutions', category: 'Marketing', imageUrl: 'https://img.freepik.com/free-photo/portrait-confident-young-businessman-with-his-arms-crossed_23-2148176206.jpg?semt=ais_hybrid&w=740&q=80' },
+  { id: 5, name: 'Emma', initial: 'S.', experience: 8, university: 'MIT', company: 'Global Finance Co.', category: 'Finance', imageUrl: 'https://thumbs.dreamstime.com/b/photo-young-happy-cheerful-excited-positive-good-mood-afro-girl-white-blouse-isolated-blue-color-background-223427564.jpg' },
+  { id: 6, name: 'Chris', initial: 'B.', experience: 6, university: 'London School of Economics', company: 'Future Ops', category: 'Operations', imageUrl: 'https://www.shutterstock.com/image-photo/serious-young-ambitious-indian-businessman-260nw-2598795817.jpg' },
   // Add more data for full category display
 ];
 
@@ -35,12 +35,12 @@ const categories: Category[] = [
 ];
 
 // Helper to get an icon based on the category name
-const getIconHtml = (category: Category) => {
+const getCategoryIcon = (category: Category) => {
   switch (category) {
-    case 'Executive Assistant+': return '&#x2728;'; // Sparkle
-    case 'Finance': return '&#x1F4B5;'; // Money Bag
-    case 'Marketing': return '&#x1F4E3;'; // Megaphone
-    case 'Operations': return '&#x269B;'; // Crossroads/Switch
+    case 'Executive Assistant+': return '★';
+    case 'Finance': return '$';
+    case 'Marketing': return '◆';
+    case 'Operations': return '⚙';
     default: return '';
   }
 };
@@ -66,11 +66,11 @@ const TalentCard: React.FC<TalentCardProps> = ({ talent }) => {
       </div>
       <div className="card-details">
         <div className="detail-item">
-          <span className="icon">&#x2692;</span> {/* Award/Badge icon */}
+          <div className="detail-icon education-icon"></div>
           <span className="text">{university}</span>
         </div>
         <div className="detail-item">
-          <span className="icon">&#x2637;</span> {/* Building icon (Using a simple UTF-8 character) */}
+          <div className="detail-icon company-icon"></div>
           <span className="text">{company}</span>
         </div>
       </div>
@@ -95,9 +95,8 @@ const CategoryButtons: React.FC<CategoryButtonsProps> = ({ activeCategory, onCat
           className={`category-button ${activeCategory === category ? 'active' : ''}`} 
           onClick={() => onCategoryChange(category)}
         >
-          {/* Use dangerouslySetInnerHTML for HTML entities */}
-          <span dangerouslySetInnerHTML={{ __html: getIconHtml(category) }} />
-          {category}
+          <span className="category-icon">{getCategoryIcon(category)}</span>
+          <span className="category-label">{category}</span>
         </button>
       ))}
     </div>
@@ -122,6 +121,10 @@ const TalentSection: React.FC = () => {
 
   return (
     <section className="talent-section">
+      <div className="section-header">
+        <h2 className="section-title">Browse Talent by Category</h2>
+        <p className="section-subtitle">Discover highly skilled professionals across various specializations</p>
+      </div>
       
       <CategoryButtons
         activeCategory={activeCategory}
@@ -134,7 +137,7 @@ const TalentSection: React.FC = () => {
             <TalentCard key={talent.id} talent={talent} />
           ))
         ) : (
-          <p className="no-results">No talent found in the **{activeCategory}** category.</p>
+          <p className="no-results">No talent found in the {activeCategory} category.</p>
         )}
       </div>
 
