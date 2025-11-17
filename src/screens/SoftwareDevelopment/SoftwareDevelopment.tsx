@@ -1,6 +1,7 @@
 import React from 'react';
 import { RoleTemplate } from '../../components/RoleTemplate';
 import manImage from '../../assets/images/man.jpg';
+import heroIcon from '../../assets/images/ourroles-3.png';
 
 const SoftwareDevelopment: React.FC = () => {
   const heroTitle = "Development & Innovation Talent for Modern Teams";
@@ -50,6 +51,7 @@ const SoftwareDevelopment: React.FC = () => {
     <RoleTemplate
       heroTitle={heroTitle}
       heroDescription={heroDescription}
+      heroIcon={heroIcon}
       profilesSectionTitle={profilesSectionTitle}
       profilesSectionDescription={profilesSectionDescription}
       categories={categories}

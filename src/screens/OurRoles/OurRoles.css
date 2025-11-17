@@ -326,16 +326,16 @@
 
 @media (max-width: 768px) {
   .page-container {
-    padding: 0 2rem;
+    padding: 0;
   }
   
   .hero-section {
-    padding: 3rem 0;
+    padding: 3rem 1rem;
     min-height: 90vh;
   }
   
   .profiles-section {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
   
   .hero-title {
@@ -343,7 +343,7 @@
   }
   
   .hero-description {
-    font-size: 1.0rem;
+    font-size: 0.95rem;
   }
   
   .section-title {
@@ -368,6 +368,10 @@
     max-width: 280px;
   }
   
+  .section-container {
+    padding: 0 1.5rem;
+  }
+  
   .profiles-layout {
     gap: 2.5rem;
   }
@@ -375,16 +379,16 @@
 
 @media (max-width: 480px) {
   .page-container {
-    padding: 0 1rem;
+    padding: 0;
   }
   
   .hero-section {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     min-height: 85vh;
   }
   
   .profiles-section {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
   }
   
   .hero-title {
@@ -392,7 +396,7 @@
   }
   
   .hero-description {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
   
   .section-title {
@@ -432,6 +436,10 @@
   
   .profile-name {
     font-size: 1.6rem;
+  }
+  
+  .section-container {
+    padding: 0 1rem;
   }
 }
 
@@ -870,14 +878,24 @@
   .how-we-do-it-section {
     padding: 4rem 0;
     margin: 0;
+    min-height: auto;
+  }
+  
+  .how-container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
   }
   
   .how-header {
-    padding: 0 2rem;
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
   }
   
   .how-title {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
   
   .how-description {
@@ -886,43 +904,56 @@
   
   .steps-carousel {
     margin: 0;
-    padding: 0 2rem;
-    overflow: hidden;
+    padding: 0 1.5rem;
+    overflow: visible;
+    width: 100%;
   }
   
   .carousel-controls {
-    padding: 0 2rem;
+    display: none;
   }
   
   .steps-track {
+    display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding-right: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    transform: none !important;
+    transition: none;
   }
   
   .step-card {
     flex: 0 0 auto;
     width: 100%;
-    min-height: 320px;
-    padding: 1.8rem 1.5rem;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
   }
   
   .step-icon {
     width: 110px;
     height: 110px;
+    margin-bottom: 1rem;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-bottom: 0.875rem;
   }
   
   .step-title {
     font-size: 1.4rem;
+    margin-bottom: 0.625rem;
   }
   
   .step-text {
     font-size: 0.9rem;
-  }
-  
-  .carousel-btn {
-    width: 48px;
-    height: 48px;
   }
 }
 
@@ -930,56 +961,84 @@
   .how-we-do-it-section {
     padding: 3rem 0;
     margin: 0;
+    min-height: auto;
+  }
+  
+  .how-container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
   }
   
   .how-header {
     padding: 0 1rem;
+    margin-bottom: 2.5rem;
   }
   
   .how-title {
     font-size: 2rem;
+    margin-bottom: 0.875rem;
   }
   
   .how-description {
     font-size: 0.95rem;
-    padding: 0 1rem;
+    padding: 0;
   }
   
   .steps-carousel {
     margin: 0;
     padding: 0 1rem;
+    overflow: visible;
+    width: 100%;
   }
   
   .carousel-controls {
-    padding: 0 1rem;
+    display: none;
+  }
+  
+  .steps-track {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    transform: none !important;
+    transition: none;
   }
   
   .step-card {
-    min-height: 300px;
-    padding: 1.5rem 1rem;
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 1.75rem 1.25rem;
+    box-sizing: border-box;
   }
   
   .step-icon {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0.875rem;
   }
   
   .step-number {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
     font-size: 1.1rem;
+    margin-bottom: 0.75rem;
   }
   
   .step-title {
     font-size: 1.25rem;
+    margin-bottom: 0.5rem;
   }
   
   .step-text {
     font-size: 0.875rem;
-  }
-  
-  .carousel-controls {
-    margin-top: 2rem;
+    line-height: 1.5;
   }
 }
 
@@ -1054,118 +1113,7 @@
   
   .section-container {
     padding: 0 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 3rem 1rem;
-    min-height: 90vh;
-  }
-  
-  .profiles-section {
-    padding: 2rem 0;
-  }
-  
-  .hero-title {
-    font-size: 2.8rem;
-  }
-  
-  .hero-description {
-    font-size: 0.95rem;
-  }
-  
-  .section-title {
-    font-size: 2.8rem;
-  }
-  
-  .section-description {
-    font-size: 1rem;
-  }
-  
-  .categories-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-  
-  .category-item {
-    padding: 1.8rem;
-  }
-  
-  .profile-container {
-    padding: 2rem 1.5rem;
-    max-width: 280px;
-  }
-  
-  .section-container {
-    padding: 0 1.5rem;
-  }
-  
-  .profiles-layout {
-    gap: 2.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 2rem 1rem;
-    min-height: 85vh;
-  }
-  
-  .profiles-section {
-    padding: 1.5rem 0;
-  }
-  
-  .hero-title {
-    font-size: 2.2rem;
-  }
-  
-  .hero-description {
-    font-size: 0.8rem;
-  }
-  
-  .section-title {
-    font-size: 2.2rem;
-  }
-  
-  .section-description {
-    font-size: 0.95rem;
-  }
-  
-  .cta-button {
-    padding: 1rem 2.5rem;
-    font-size: 1rem;
-  }
-  
-  .category-item {
-    padding: 1.5rem;
-  }
-  
-  .category-title {
-    font-size: 1.2rem;
-  }
-  
-  .category-text {
-    font-size: 0.9rem;
-  }
-  
-  .profile-container {
-    max-width: 260px;
-    padding: 1.8rem 1.2rem;
-  }
-  
-  .image-placeholder {
-    width: 140px;
-    height: 180px;
-  }
-  
-  .profile-name {
-    font-size: 1.6rem;
-  }
-  
-  .section-container {
-    padding: 0 1rem;
-  }
+      }
 }
 
 .hero-icon {

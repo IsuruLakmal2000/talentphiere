@@ -1,6 +1,7 @@
 import React from 'react';
 import { RoleTemplate } from '../../components/RoleTemplate';
 import womanImage from '../../assets/images/woman.jpg';
+import heroIcon from '../../assets/images/ourroles-1.png';
 
 const OurRoles: React.FC = () => {
   const heroTitle = "Hire an EA that's designed for Founders";
@@ -46,6 +47,7 @@ const OurRoles: React.FC = () => {
     <RoleTemplate
       heroTitle={heroTitle}
       heroDescription={heroDescription}
+      heroIcon={heroIcon}
       profilesSectionTitle={profilesSectionTitle}
       profilesSectionDescription={profilesSectionDescription}
       categories={categories}

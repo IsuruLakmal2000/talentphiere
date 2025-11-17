@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { Navbar } from './components'
+import { ScrollToTop } from './components/ScrollToTop'
 import { Home, OurRoles, SoftwareDevelopment, InfrastructureOperations, DigitalMarketingGrowth, BrandStrategy, HireForm, CareerForm } from './screens'
 import SuccessStory from './screens/SuccessStory/SuccessStory'
 import HowToGuide from './screens/HowToGuide/HowToGuide'
@@ -16,6 +17,7 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="app">
+      <ScrollToTop />
       {!isFormPage && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />

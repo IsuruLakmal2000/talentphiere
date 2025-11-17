@@ -16,6 +16,7 @@ interface ProfileData {
 interface RoleTemplateProps {
   heroTitle: string;
   heroDescription: string;
+  heroIcon?: string; // Optional image path for hero icon
   profilesSectionTitle: string;
   profilesSectionDescription: string;
   categories: CategoryItem[];
@@ -25,6 +26,7 @@ interface RoleTemplateProps {
 const RoleTemplate: React.FC<RoleTemplateProps> = ({
   heroTitle,
   heroDescription,
+  heroIcon,
   profilesSectionTitle,
   profilesSectionDescription,
   categories,
@@ -61,15 +63,13 @@ const RoleTemplate: React.FC<RoleTemplateProps> = ({
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <div className="hero-icon">
-            <div className="icon-wrapper">
-              <svg width="80" height="80" viewBox="0 0 80 80" className="hero-svg">
-                <path d="M20 20h40v40H20z" fill="#2563eb" opacity="0.2"/>
-                <path d="M25 25h30v30H25z" fill="#2563eb"/>
-                <path d="M30 35h20v2H30zM30 40h15v2H30zM30 45h25v2H30z" fill="white"/>
-              </svg>
+          {heroIcon && (
+            <div className="hero-icon">
+              <div className="icon-wrapper">
+                <img src={heroIcon} alt="Role Icon" className="hero-image" />
+              </div>
             </div>
-          </div>
+          )}
           
           <h1 className="hero-title">{heroTitle}</h1>
           
@@ -136,7 +136,7 @@ const RoleTemplate: React.FC<RoleTemplateProps> = ({
               </blockquote>
               <div className="testimonial-author">
                 <img 
-                  src="https://via.placeholder.com/48" 
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRazGKny1CSlH3XZGzdceONvBwSZqNVKklLnA&s" 
                   alt="Brooks Powell" 
                   className="author-avatar"
                 />
