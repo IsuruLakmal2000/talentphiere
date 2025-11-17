@@ -48,18 +48,31 @@
 
 .how-icon {
   position: absolute;
-  left: -120px;
-  width: 80px;
-  height: 80px;
+  left: -240px; /* adjust as needed to align nicely */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 150px; /* bigger space for the image */
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: visible; /* allow image to scale outside */
 }
 
 .how-icon img {
-  width: 60px;
-  opacity: 0.6;
+  width: 200px !important;      /* sets a consistent visible size */
+  height: 200px !important;     /* ensures all are same height */
+  max-width: none !important;
+  max-height: none !important;
+  opacity: 0.95;
+  object-fit: contain;          /* keeps proportions */
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+  background: transparent;      /* make sure background is clear */
+  padding: 10px;                /* add some breathing space */
+  box-sizing: border-box;
+  
 }
+
 
 .how-content {
   margin-left: 30px;
@@ -90,6 +103,7 @@
   color: #c5d9e8;
   font-size: 15px;
   line-height: 1.6;
+  text-align: left;
 }
 
 /* Responsive */
