@@ -19,9 +19,9 @@ const processData: ProcessCard[] = [
     description:
       'A 6-step hiring process that vets for experience, skill set, work ethic, and personality traits. We leverage third party assessments and multiple interviews to thoroughly evaluate every candidate.',
     features: [
-      { icon: '⭐', text: '(1% of applicants get hired)' },
-      { icon: '🇬🇧', text: '100% English proficiency' },
-      { icon: '✅', text: 'Verified background checks' },
+      { icon: '✓', text: '1% of applicants get hired' },
+      { icon: '✓', text: '100% English proficiency' },
+      { icon: '✓', text: 'Verified background checks' },
     ],
   },
   {
@@ -30,20 +30,20 @@ const processData: ProcessCard[] = [
     description:
       'A live, intensive, bootcamp-style program designed to teach our Divers how to proactively support the unique challenges of Founders, business owners, and high growth executives.',
     features: [
-      { icon: '📚', text: 'Taught by world class EAs' },
-      { icon: '📘', text: 'Covers all best practices' },
-      { icon: '🧑‍🎓', text: 'Post-graduation coaching' },
+      { icon: '✓', text: 'Taught by world class EAs' },
+      { icon: '✓', text: 'Covers all best practices' },
+      { icon: '✓', text: 'Post-graduation coaching' },
     ],
   },
   {
     id: 3,
     title: 'Our matching process',
     description:
-      'We deep dive into your current needs and understand your working style and preferences - then we hand select the Diver we feel will be your best partner. 🤝',
+      'We deep dive into your current needs and understand your working style and preferences - then we hand select the Diver we feel will be your best partner.',
     features: [
-      { icon: '⏱️', text: '2-week turnaround' },
-      { icon: '✏️', text: 'Profile review & optional interview' },
-      { icon: '🔄', text: 'Complementary rematching' },
+      { icon: '✓', text: '2-week turnaround' },
+      { icon: '✓', text: 'Profile review & optional interview' },
+      { icon: '✓', text: 'Complementary rematching' },
     ],
   },
   {
@@ -52,9 +52,9 @@ const processData: ProcessCard[] = [
     description:
       'We invest heavily in our Divers through ongoing coaching, learning and development, and support through our community of Divers — so no one ever dives alone.',
     features: [
-      { icon: '👤', text: 'Full-time dedicated coaches' },
-      { icon: '🛠️', text: 'Learning and development' },
-      { icon: '👥', text: '300+ Divers strong' },
+      { icon: '✓', text: 'Full-time dedicated coaches' },
+      { icon: '✓', text: 'Learning and development' },
+      { icon: '✓', text: '300+ Divers strong' },
     ],
   },
 ];
@@ -85,19 +85,17 @@ const Card: React.FC<{ card: ProcessCard; isStacked: boolean; stackIndex: number
       data-id={card.id}
     >
       <div className="process-card">
-        <div className="icon-header">
-          {/* Simple gear icon representation */}
-          <div className="gear-icon">⚙️</div>
-          <div className="gear-icon">⚙️</div>
+        <div className="card-header">
+          <div className="step-number-badge">{card.id}</div>
+          <h2 className="card-title">{card.title}</h2>
         </div>
-        <h2>{card.title}</h2>
-        <p>{card.description}</p>
-        <div className="features">
+        <p className="card-description">{card.description}</p>
+        <div className="features-list">
           {card.features.map((feature, index) => (
-            <span key={index} className="feature">
-              <span className="feature-icon">{feature.icon}</span>
-              {feature.text}
-            </span>
+            <div key={index} className="feature-item">
+              <span className="feature-checkmark">{feature.icon}</span>
+              <span className="feature-text">{feature.text}</span>
+            </div>
           ))}
         </div>
       </div>
