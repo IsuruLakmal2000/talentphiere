@@ -45,13 +45,6 @@ const HireFormStep3: React.FC<HireFormStep3Props> = ({
         {/* Left Side - Steps */}
         <div className="hire-form-left">
           <div className="hire-form-logo">
-            <div className="logo-circle">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="2" fill="none"/>
-                <circle cx="20" cy="20" r="10" stroke="white" strokeWidth="2" fill="none"/>
-                <circle cx="20" cy="20" r="4" fill="white"/>
-              </svg>
-            </div>
             <span className="logo-text">TALENTPHERE</span>
           </div>
 

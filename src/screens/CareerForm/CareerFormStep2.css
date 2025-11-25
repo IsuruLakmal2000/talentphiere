@@ -95,11 +95,11 @@
   justify-content: center;
 }
 
-.logo-text {
+.career-form-logo .logo-text {
   font-family: 'Bastia', 'Georgia', serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: white;
+  color: white !important;
   letter-spacing: 1px;
 }
 
@@ -407,8 +407,9 @@ form {
     padding: 2rem 1.5rem;
   }
 
-  .logo-text {
+  .career-form-logo .logo-text {
     font-size: 1.375rem;
+    color: white !important;
   }
 
   .form-heading {
@@ -485,8 +486,9 @@ form {
     padding: 1.5rem 1.25rem;
   }
 
-  .logo-text {
+  .career-form-logo .logo-text {
     font-size: 1.25rem;
+    color: white !important;
   }
 
   .form-heading {
@@ -556,8 +558,9 @@ form {
     font-size: 1.5rem;
   }
 
-  .logo-text {
+  .career-form-logo .logo-text {
     font-size: 1.125rem;
+    color: white !important;
   }
 
   .step-title {

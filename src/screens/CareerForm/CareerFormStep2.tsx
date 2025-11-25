@@ -46,13 +46,6 @@ const CareerFormStep2: React.FC<CareerFormStep2Props> = ({ onNext, onBack, initi
         {/* Left Side - Steps */}
         <div className="career-form-left">
           <div className="career-form-logo">
-            <div className="logo-circle">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="2" fill="none"/>
-                <circle cx="20" cy="20" r="10" stroke="white" strokeWidth="2" fill="none"/>
-                <circle cx="20" cy="20" r="4" fill="white"/>
-              </svg>
-            </div>
             <span className="logo-text">TALENTPHERE</span>
           </div>
 
