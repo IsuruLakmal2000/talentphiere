@@ -4,7 +4,7 @@
 
 .talent-section {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e8f0f9 100%);
+  background: var(--gradient-bg-light);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
@@ -18,14 +18,14 @@
 .section-title {
   font-size: 42px;
   font-weight: 700;
-  color: #1a2332;
+  color: var(--text-primary);
   letter-spacing: -0.5px;
   margin-bottom: 12px;
 }
 
 .section-subtitle {
   font-size: 18px;
-  color: #5a6c7d;
+  color: var(--text-secondary);
   font-weight: 400;
   margin: 0;
 }
@@ -46,12 +46,12 @@
 
 .category-button {
   background: rgba(255, 255, 255, 0.7);
-  border: 2px solid rgba(59, 130, 246, 0.1);
+  border: 2px solid var(--border-primary);
   padding: 14px 28px;
   border-radius: 12px;
   font-size: 15px;
   font-weight: 600;
-  color: #475569;
+  color: var(--text-secondary);
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
@@ -65,7 +65,7 @@
 .category-icon {
   font-size: 18px;
   font-weight: 700;
-  color: #3b82f6;
+  color: var(--primary);
   transition: transform 0.3s ease;
 }
 
@@ -75,10 +75,10 @@
 
 /* Active Button Style */
 .category-button.active {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: white;
-  border-color: #3b82f6;
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+  border-color: var(--primary);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
   transform: translateY(-2px);
 }
 
@@ -90,9 +90,19 @@
 /* Hover Style */
 .category-button:not(.active):hover {
   background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(59, 130, 246, 0.3);
+  border-color: var(--primary);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
+  color: var(--text-secondary);
+}
+
+.category-button:not(.active):hover .category-icon {
+  color: var(--primary);
+  transform: scale(1.05);
+}
+
+.category-button:not(.active):hover .category-label {
+  color: var(--text-secondary);
 }
 
 /* --- Talent Cards Grid and Card Styles --- */
@@ -109,7 +119,7 @@
 }
 
 .talent-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  background: var(--gradient-card);
   border-radius: 16px;
   padding: 28px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
@@ -118,7 +128,7 @@
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid var(--border-light);
   position: relative;
   overflow: hidden;
 }
@@ -130,7 +140,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
 }
 
 .talent-card:hover {
@@ -150,21 +160,21 @@
   border-radius: 50%;
   object-fit: cover;
   margin-right: 16px;
-  border: 3px solid #3b82f6;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  border: 3px solid var(--primary);
+  box-shadow: 0 4px 12px var(--border-primary);
 }
 
 .name {
   font-size: 20px;
   font-weight: 700;
   margin: 0;
-  color: #1e293b;
+  color: var(--text-primary);
   letter-spacing: -0.3px;
 }
 
 .experience {
   font-size: 14px;
-  color: #64748b;
+  color: var(--text-tertiary);
   margin: 4px 0 0 0;
   font-weight: 500;
 }
@@ -182,13 +192,13 @@
   align-items: center;
   gap: 14px;
   padding: 10px 12px;
-  background: rgba(59, 130, 246, 0.04);
+  background: var(--overlay-primary-light);
   border-radius: 10px;
   transition: all 0.2s ease;
 }
 
 .detail-item:hover {
-  background: rgba(59, 130, 246, 0.08);
+  background: var(--overlay-primary-medium);
   transform: translateX(4px);
 }
 
@@ -204,7 +214,7 @@
 }
 
 .education-icon {
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
   box-shadow: 0 3px 8px rgba(139, 92, 246, 0.25);
 }
 
@@ -227,7 +237,7 @@
 
 .text {
   font-size: 14px;
-  color: #334155;
+  color: var(--text-secondary);
   line-height: 1.6;
   font-weight: 500;
   flex: 1;
@@ -235,7 +245,7 @@
 
 .no-results {
   font-size: 18px;
-  color: #64748b;
+  color: var(--text-tertiary);
   text-align: center;
   padding: 60px 30px;
   font-weight: 500;

@@ -1,5 +1,5 @@
 .how-section {
-  background-color: #043a5c;
+  background-color: #064e3b;
   color: #ffffff;
   padding: 100px 20px;
   display: flex;
@@ -23,7 +23,7 @@
 
 .how-subtitle {
   text-align: center;
-  color: #d4e4f2;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
   max-width: 600px;
   margin: 0 auto 80px;
@@ -100,7 +100,7 @@
 }
 
 .how-content p {
-  color: #c5d9e8;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 15px;
   line-height: 1.6;
   text-align: left;

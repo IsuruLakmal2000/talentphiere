@@ -1,0 +1,133 @@
+/* Global Theme Variables - Centralized Color Control */
+
+:root {
+  /* Primary Colors - Green Theme */
+  --primary: #10b981;
+  --primary-dark: #059669;
+  --primary-light: #34d399;
+  --primary-pale: #d1fae5;
+  --primary-ultra-light: #ecfdf5;
+  
+  /* Secondary/Accent Colors */
+  --secondary: #14b8a6;
+  --secondary-dark: #0d9488;
+  --accent: #6366f1;
+  --accent-dark: #4f46e5;
+  
+  /* Text Colors */
+  --text-primary: #1a2332;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+  --text-light: #94a3b8;
+  
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --bg-accent: #f0fdf4;
+  
+  /* Gradient Backgrounds */
+  --gradient-bg-light: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  --gradient-bg-medium: linear-gradient(135deg, #f5f7fa 0%, #e8f0f9 100%);
+  --gradient-card: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+  
+  /* Button Gradients */
+  --gradient-primary: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --gradient-secondary: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  --gradient-accent: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  --gradient-top-accent: linear-gradient(90deg, #10b981 0%, #14b8a6 100%);
+  
+  /* Shadow Colors with Primary Theme */
+  --shadow-sm: 0 2px 8px rgba(16, 185, 129, 0.08);
+  --shadow-md: 0 4px 12px rgba(16, 185, 129, 0.12);
+  --shadow-lg: 0 8px 24px rgba(16, 185, 129, 0.15);
+  --shadow-xl: 0 12px 32px rgba(16, 185, 129, 0.18);
+  --shadow-2xl: 0 20px 60px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.04);
+  
+  /* Border Colors */
+  --border-light: rgba(226, 232, 240, 0.8);
+  --border-medium: rgba(203, 213, 225, 0.6);
+  --border-primary: rgba(16, 185, 129, 0.2);
+  
+  /* Status Colors */
+  --success: #10b981;
+  --success-dark: #059669;
+  --warning: #f59e0b;
+  --warning-dark: #d97706;
+  --error: #ef4444;
+  --error-dark: #dc2626;
+  --info: #3b82f6;
+  --info-dark: #2563eb;
+  
+  /* Overlay Colors with Primary */
+  --overlay-primary-light: rgba(16, 185, 129, 0.04);
+  --overlay-primary-medium: rgba(16, 185, 129, 0.08);
+  --overlay-primary-dark: rgba(16, 185, 129, 0.12);
+  
+  /* Badge/Icon Colors */
+  --badge-education: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  --badge-company: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --badge-checkmark: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  
+  /* Spacing (optional - for consistency) */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Alternative Blue Theme (Commented out - switch by uncommenting) */
+/*
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --primary-light: #60a5fa;
+  --primary-pale: #dbeafe;
+  --primary-ultra-light: #eff6ff;
+  
+  --secondary: #8b5cf6;
+  --secondary-dark: #7c3aed;
+  
+  --gradient-bg-light: linear-gradient(135deg, #f5f7fa 0%, #e8f0f9 100%);
+  --gradient-card: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  --gradient-top-accent: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+  
+  --shadow-sm: 0 2px 8px rgba(59, 130, 246, 0.08);
+  --shadow-md: 0 4px 12px rgba(59, 130, 246, 0.12);
+  --shadow-lg: 0 8px 24px rgba(59, 130, 246, 0.15);
+  
+  --overlay-primary-light: rgba(59, 130, 246, 0.04);
+  --overlay-primary-medium: rgba(59, 130, 246, 0.08);
+  --overlay-primary-dark: rgba(59, 130, 246, 0.12);
+}
+*/
+
+/* Dark Mode Support (Future Enhancement) */
+@media (prefers-color-scheme: dark) {
+  /* Uncomment and customize for dark mode support */
+  /*
+  :root {
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+  }
+  */
+}

@@ -2,8 +2,8 @@
 
 /* --- Main Section and Background --- */
 .common-questions-section {
-  /* Dark blue background color from the image */
-  background-color: #0d2847; 
+  /* Dark green background color */
+  background-color: #064e3b; 
   padding: 80px 100px;
   color: white; /* Default text color */
 }
@@ -35,9 +35,8 @@
 /* --- Individual Q&A Item --- */
 .qa-item {
   display: flex;
-  /* Use a background slightly lighter than the section for subtle contrast,
-     though in the image, the contrast mostly comes from the padding/layout. */
-  background-color: #123157; 
+  /* Use a background slightly lighter than the section for subtle contrast */
+  background-color: #065f46; 
 }
 
 /* --- Question Column --- */

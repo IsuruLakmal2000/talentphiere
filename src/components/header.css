@@ -1,10 +1,10 @@
 /* Using unique class names to avoid conflicts with RoleTemplate */
 .home-page-hero {
-  background-color: #e0f1f8; /* light ocean blue */
+  background-color: var(--primary-pale); /* light green */
   background-image: radial-gradient(
     circle at right center,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(224, 241, 248, 1) 70%
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(236, 253, 245, 1) 70%
   );
   text-align: center;
   min-height: 80vh; /* Full viewport height */
@@ -13,7 +13,7 @@
   justify-content: center;
   padding: 90px 20px 60px 20px; /* Adjusted padding for fixed navbar */
   font-family: "Inter", sans-serif;
-  color: #0a3854;
+  color: var(--text-primary);
   position: relative;
   overflow: hidden;
 }
@@ -28,7 +28,7 @@
 .home-page-hero-title {
   font-size: 3rem;
   font-weight: 700;
-  color: #0a3854;
+  color: var(--text-primary);
   line-height: 1.2;
   margin-bottom: 20px;
 }

@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   min-height: 500px;
-  background: linear-gradient(to bottom, #d9f0fc, #eaf6fd);
+  background: linear-gradient(to bottom, #dcfce7, #f0fdf4);
   text-align: center;
   padding: 80px 20px;
 }
@@ -33,7 +33,7 @@
   font-family: 'Bastia', 'Georgia', serif;
   font-size: 3.5rem;
   font-weight: 700;
-  color: #003366;
+  color: var(--text-primary);
   margin-bottom: 20px;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -68,9 +68,9 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Main Footer Content - Blue Background */
+/* Main Footer Content - Green Background */
 .footer-main {
-  background: linear-gradient(135deg, #2c5f7a 0%, #1e4a5f 100%);
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
   padding: 80px 20px 60px;
   color: white;
 }
@@ -183,7 +183,7 @@
 
 /* Copyright Bar */
 .footer-bottom {
-  background: #1a3d4f;
+  background: #053a2e;
   padding: 30px 20px;
   text-align: center;
 }

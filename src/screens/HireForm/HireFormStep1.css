@@ -27,7 +27,7 @@
 
 /* ========== LEFT PANEL ========== */
 .hire-form-left {
-  background: linear-gradient(180deg, #2c5f7a 0%, #1e4a5f 100%);
+  background: linear-gradient(180deg, #064e3b 0%, #065f46 100%);
   padding: 3rem 2.5rem;
   display: flex;
   flex-direction: column;
@@ -46,9 +46,9 @@
   width: 200%;
   height: 200%;
   background: 
-    radial-gradient(ellipse 800px 600px at 0% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse 700px 500px at 100% 60%, rgba(37, 99, 235, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse 900px 700px at 50% 100%, rgba(29, 78, 216, 0.1) 0%, transparent 50%);
+    radial-gradient(ellipse 800px 600px at 0% 30%, var(--border-primary) 0%, transparent 50%),
+    radial-gradient(ellipse 700px 500px at 100% 60%, rgba(16, 185, 129, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 900px 700px at 50% 100%, rgba(5, 150, 105, 0.1) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -66,15 +66,15 @@
       135deg,
       transparent,
       transparent 70px,
-      rgba(59, 130, 246, 0.08) 70px,
-      rgba(59, 130, 246, 0.08) 140px
+      var(--overlay-primary-medium) 70px,
+      var(--overlay-primary-medium) 140px
     ),
     repeating-linear-gradient(
       45deg,
       transparent,
       transparent 70px,
-      rgba(37, 99, 235, 0.05) 70px,
-      rgba(37, 99, 235, 0.05) 140px
+      rgba(16, 185, 129, 0.05) 70px,
+      rgba(16, 185, 129, 0.05) 140px
     );
   opacity: 0.5;
   pointer-events: none;
@@ -149,7 +149,7 @@
 
 .step-number.active {
   background: white;
-  color: #2c5f7a;
+  color: var(--primary-dark);
 }
 
 /* Step Content */
@@ -196,7 +196,7 @@
   font-family: 'Bastia', 'Georgia', serif;
   font-size: 3.25rem;
   font-weight: 700;
-  color: #2c5f7a;
+  color: var(--primary-dark);
   margin: 0 0 2.5rem 0;
   line-height: 1.15;
   text-align: center;
@@ -224,7 +224,7 @@ form {
 .form-label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #4b5563;
+  color: var(--text-secondary);
   margin: 0;
 }
 
@@ -246,7 +246,7 @@ form {
 
 .form-input:focus {
   outline: none;
-  border-color: #2c5f7a;
+  border-color: var(--primary-dark);
   background: white;
   box-shadow: 0 0 0 3px rgba(44, 95, 122, 0.1);
 }
