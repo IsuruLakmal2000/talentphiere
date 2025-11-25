@@ -73,7 +73,7 @@ const FooterSection: React.FC = () => {
               <li><Link to="/how-we-hire">How We Hire</Link></li>
               <li><Link to="/pricing">Pricing</Link></li>
              
-                <li><a href="/careers">Careers</a></li>
+                <li><Link to="/careers">Careers</Link></li>
             </ul>
           </div>
 
