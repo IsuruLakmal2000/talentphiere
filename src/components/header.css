@@ -4,8 +4,9 @@
   background-image: 
     linear-gradient(
       to top,
-      rgba(255, 255, 255, 0.3) 0%,
-      rgb(228, 255, 242) 100%
+      rgba(255, 255, 255, 0.483) 0%,
+       rgba(237, 255, 226, 0.598) 50%,
+      rgb(166, 248, 208) 100%
     ),
     url('../assets/world.png');
   background-position: center center, center calc(-20%);
