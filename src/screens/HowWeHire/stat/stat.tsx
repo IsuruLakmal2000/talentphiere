@@ -10,7 +10,7 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    color: "#FF6B00",
+    color: "#10b981",
     number: "1500",
     title: "Applicants Monthly",
     description:
@@ -24,7 +24,7 @@ const stats: Stat[] = [
       "“I’m blown away by her experience,” is a common statement that we hear.",
   },
   {
-    color: "#5B9EFF",
+    color: "#14b8a6",
     number: "4.7/5",
     title: "Average Rating",
     description:

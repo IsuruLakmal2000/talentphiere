@@ -257,7 +257,7 @@ form {
 
 /* Submit Button */
 .form-submit-btn {
-  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  background: var(--gradient-primary);
   color: white;
   font-size: 1.0625rem;
   font-weight: 700;
@@ -266,7 +266,7 @@ form {
   border-radius: 28px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.35);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
   margin-top: 1.75rem;
   width: fit-content;
   align-self: center;
@@ -274,7 +274,8 @@ form {
 
 .form-submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(249, 115, 22, 0.45);
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.45);
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
 }
 
 .form-submit-btn:active {

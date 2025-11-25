@@ -48,7 +48,7 @@
 }
 
 .footer-button {
-  background-color: #ff6a00;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: white;
   border: none;
   padding: 15px 40px;
@@ -57,15 +57,17 @@
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
   text-decoration: none;
   display: inline-block;
 }
 
 .footer-button:hover {
-  background-color: #e35c00;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #047857 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.5);
+  color: white;
+  text-decoration: none;
 }
 
 /* Main Footer Content - Green Background */

@@ -1,35 +1,51 @@
 .success-section {
-  background-color: #f7f8ec;
-  padding: 100px 40px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  padding: 70px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Inter", sans-serif;
-  color: #111;
+  color: var(--text-primary);
 }
 
 /* Header */
 .success-header {
   text-align: center;
-  margin-bottom: 60px;
-  
+  margin-bottom: 50px;
+  max-width: 800px;
 }
 
 .header-icon {
   width: 60px;
-  opacity: 0.8;
-  margin-bottom: 20px;
+  height: 60px;
+  margin: 0 auto 16px;
+  padding: 14px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+}
+
+.header-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .success-header h2 {
-  font-size: 36px;
-  font-weight: 800;
-  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .success-header p {
   font-size: 16px;
-  color: #444;
+  color: var(--text-secondary);
+  line-height: 1.5;
 }
 
 /* Content Layout */
@@ -37,7 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
+  gap: 32px;
   max-width: 1200px;
   width: 100%;
 }
@@ -51,63 +67,106 @@
 }
 
 .industry-card {
-  background: #e7eade;
-  border-radius: 10px;
+  background: white;
+  border-radius: 12px;
   padding: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.industry-card:hover,
+.industry-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.12);
+  border-color: var(--primary-light);
+}
+
 .industry-card.active {
-  background: #dce0d2;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background: var(--bg-accent);
+  border-color: var(--primary);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.15);
+  transform: translateY(-3px);
 }
 
 .industry-card h3 {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 8px;
+  color: var(--text-primary);
 }
 
 .industry-card p {
-  font-size: 15px;
-  color: #444;
-  line-height: 1.4;
-  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 12px;
 }
 
 .learn-more {
-  color: #000;
+  color: var(--primary);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.learn-more:hover {
+  color: var(--primary-dark);
   text-decoration: underline;
 }
 
 /* Right Review Panel */
 .review-panel {
-  background: #e7eade;
-  border-radius: 12px;
+  background: white;
+  border-radius: 16px;
   flex: 1;
-  padding: 30px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 340px;
-  transition: all 0.3s ease;
+  min-height: 280px;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 2px solid var(--primary-pale);
+  position: relative;
+  overflow: hidden;
+}
+
+.review-panel::before {
+  content: '"';
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  font-size: 90px;
+  font-family: Georgia, serif;
+  color: var(--primary-pale);
+  opacity: 0.3;
+  line-height: 1;
+  z-index: 0;
 }
 
 .review-text {
   font-size: 16px;
-  color: #1c1c1c;
-  line-height: 1.6;
-  margin-bottom: 30px;
+  color: var(--text-primary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
 }
 
 .reviewer {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 2px solid var(--primary-pale);
+  position: relative;
+  z-index: 1;
 }
 
 .reviewer img {
@@ -115,39 +174,169 @@
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
+  border: 2px solid var(--primary-pale);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reviewer div {
+  flex: 1;
 }
 
 .reviewer h4 {
-  margin: 0;
+  margin: 0 0 3px 0;
   font-size: 16px;
   font-weight: 700;
+  color: var(--text-primary);
 }
 
 .reviewer p {
   font-size: 14px;
-  color: #555;
-}
-.header-icon {
-   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 30%;
-  width: 200px;
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 500;
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .success-section {
+    padding: 60px 30px;
+  }
+
+  .success-header h2 {
+    font-size: 30px;
+  }
+
+  .success-content {
+    gap: 28px;
+  }
+}
+
 @media (max-width: 992px) {
+  .success-section {
+    padding: 60px 24px;
+  }
+
+  .success-header {
+    margin-bottom: 40px;
+  }
+
+  .success-header h2 {
+    font-size: 28px;
+  }
+
   .success-content {
     flex-direction: column;
     align-items: center;
   }
 
   .industry-grid {
-    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 600px;
   }
 
   .review-panel {
     width: 100%;
+    max-width: 600px;
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .success-section {
+    padding: 50px 20px;
+  }
+
+  .header-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 14px;
+    padding: 12px;
+  }
+
+  .success-header {
+    margin-bottom: 35px;
+  }
+
+  .success-header h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .success-header p {
+    font-size: 15px;
+  }
+
+  .industry-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .industry-card {
+    padding: 18px;
+  }
+
+  .industry-card h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+
+  .industry-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .review-panel {
+    padding: 24px 20px;
     min-height: auto;
+  }
+
+  .review-panel::before {
+    font-size: 70px;
+    top: 10px;
+    left: 16px;
+  }
+
+  .review-text {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .reviewer {
+    padding-top: 16px;
+  }
+
+  .reviewer img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .reviewer h4 {
+    font-size: 15px;
+  }
+
+  .reviewer p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-section {
+    padding: 40px 16px;
+  }
+
+  .success-header h2 {
+    font-size: 23px;
+  }
+
+  .success-header p {
+    font-size: 14px;
+  }
+
+  .industry-card {
+    padding: 16px;
+  }
+
+  .review-panel {
+    padding: 20px 16px;
   }
 }

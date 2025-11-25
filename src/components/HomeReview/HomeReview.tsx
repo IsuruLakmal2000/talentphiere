@@ -20,7 +20,7 @@ const stories: Story[] = [
       "Yasasvee’s integration into Bite has been a gift of time and efficiency for Lindsay and everyone on her team, proving that running an entire business remotely can still be an organized and successful operation.",
     name: "Lindsay McCormick",
     role: "Bite",
-    image: "/images/lindsay.png",
+    image: "https://i.pinimg.com/1200x/e7/27/b3/e727b38bc4a2340d4b772edd0864e5c1.jpg",
   },
   {
     industry: "E-commerce",
@@ -30,7 +30,7 @@ const stories: Story[] = [
       "The Talentphere team helped us regain focus on core strategy by integrating support talent who are proactive and adaptable.",
     name: "John Roberts",
     role: "Cheers Health",
-    image: "/images/john.png",
+    image: "https://i.pinimg.com/736x/88/ae/fb/88aefb54ee3f3e7191b3df89b5230ad0.jpg",
   },
   {
     industry: "Small businesses",
@@ -40,7 +40,7 @@ const stories: Story[] = [
       "Partnering with Talentphere made scaling smooth — we onboarded skilled professionals without losing company culture.",
     name: "Sarah Kim",
     role: "MXA",
-    image: "/images/sarah.png",
+    image: "https://i.pinimg.com/736x/0e/bd/b9/0ebdb9f8cb628dc5224bd2f84a2ff9e2.jpg",
   },
   {
     industry: "Solopreneurs",
@@ -50,7 +50,7 @@ const stories: Story[] = [
       "Working with Talentphere gave me the flexibility to focus on family and business growth simultaneously. A true game-changer!",
     name: "Dan Pearson",
     role: "Independent Consultant",
-    image: "/images/dan.png",
+    image: "https://i.pinimg.com/736x/6d/eb/86/6deb86e669d45537bb84933d55488b22.jpg",
   },
 ];
 
@@ -61,11 +61,10 @@ const SuccessStories: React.FC = () => {
     <section className="success-section">
       <div className="success-header">
         <div className="header-icon">
-        <img
-          src={megaphone}
-          alt="Megaphone"
-          className="header-icon"
-        />
+          <img
+            src={megaphone}
+            alt="Megaphone"
+          />
         </div>
         <h2>Want to see real client stories?</h2>
         <p>

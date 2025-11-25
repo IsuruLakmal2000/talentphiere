@@ -58,7 +58,7 @@
 }
 
 .guide-section blockquote {
-  border-left: 4px solid #f97316;
+  border-left: 4px solid var(--primary);
   padding-left: 16px;
   font-style: italic;
   background: #f9f9f9;

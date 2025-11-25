@@ -1,11 +1,16 @@
 /* Using unique class names to avoid conflicts with RoleTemplate */
 .home-page-hero {
   background-color: var(--primary-pale); /* light green */
-  background-image: radial-gradient(
-    circle at right center,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(236, 253, 245, 1) 70%
-  );
+  background-image: 
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgb(228, 255, 242) 100%
+    ),
+    url('../assets/world.png');
+  background-position: center center, center calc(-20%);
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, 100%;
   text-align: center;
   min-height: 80vh; /* Full viewport height */
   display: flex;
@@ -42,7 +47,7 @@
 }
 /* Button */
 .home-page-hero-button {
-  background-color: #ff6a00;
+  background: var(--gradient-primary);
   color: white;
   border: none;
   padding: 15px 40px;
@@ -50,15 +55,26 @@
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 .home-page-hero-button:hover {
-  background-color: #e35c00;
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+  color: white;
+  text-decoration: none;
 }
 /* Responsive */
 @media (max-width: 768px) {
+  .home-page-hero {
+    background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(236, 253, 245, 1) 100%
+    );
+  }
+
   .home-page-hero-title {
     font-size: 2rem;
   }

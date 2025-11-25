@@ -255,14 +255,14 @@ const RoleTemplate: React.FC<RoleTemplateProps> = ({
             <div className="why-icon">
               <svg className="plus-icon" viewBox="0 0 120 120" fill="none">
                 <path d="M40 10 L40 50 L0 50 L0 70 L40 70 L40 110 L60 110 L60 70 L100 70 L100 50 L60 50 L60 10 Z" 
-                      fill="#1e3a8a" stroke="#1e3a8a" strokeWidth="2"/>
+                      fill="#10b981" stroke="#10b981" strokeWidth="2"/>
               </svg>
             </div>
             <h2 className="why-title">Why Talentphere</h2>
             <p className="why-subtitle">
               Over 400 companies have embedded Talentphere talent into their organization.
             </p>
-            <button className="why-cta-button">Hire With Talentphere</button>
+            <a href="/hire" className="why-cta-button">Hire With Talentphere</a>
           </div>
 
           <div className="why-right">
