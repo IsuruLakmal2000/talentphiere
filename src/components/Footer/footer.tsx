@@ -17,7 +17,7 @@ const FooterSection: React.FC = () => {
           <p className="footer-description">
             We help you plug highly skilled and vetted global talent into your business, so you can focus on Building Brilliantly.
           </p>
-          <Link to="/hire-form" className="footer-button">Hire With Talentphere</Link>
+          <Link to="/hire" className="footer-button">Hire With Talentphere</Link>
         </div>
       </div>
 
