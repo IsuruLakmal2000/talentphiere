@@ -72,7 +72,8 @@ const FooterSection: React.FC = () => {
               <li><Link to="/our-roles">Our Roles</Link></li>
               <li><Link to="/how-we-hire">How We Hire</Link></li>
               <li><Link to="/pricing">Pricing</Link></li>
-              <li><Link to="/success-stories">Success Stories</Link></li>
+             
+                <li><a href="/careers">Careers</a></li>
             </ul>
           </div>
 
@@ -92,9 +93,10 @@ const FooterSection: React.FC = () => {
             <h3 className="footer-column-title">Resources</h3>
             <ul className="footer-links">
               <li><Link to="/how-to-guides">How-To Guides</Link></li>
+               <li><Link to="/success-stories">Success Stories</Link></li>
               <li><Link to="/hire-form">Hire Talent</Link></li>
               <li><a href="mailto:hello@talentphere.com">Contact Us</a></li>
-              <li><a href="mailto:support@talentphere.com">Support</a></li>
+            
             </ul>
           </div>
 
@@ -102,10 +104,10 @@ const FooterSection: React.FC = () => {
           <div className="footer-column">
             <h3 className="footer-column-title">Legal</h3>
             <ul className="footer-links">
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/terms">Terms of Service</a></li>
-              <li><a href="/cookies">Cookie Policy</a></li>
-              <li><a href="/careers">Careers</a></li>
+              <li><Link to="/privacy">Privacy Policy</Link></li>
+              <li><Link to="/terms">Terms of Service</Link></li>
+        
+            
             </ul>
           </div>
         </div>

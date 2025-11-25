@@ -9,6 +9,8 @@ import HowWeHire from './screens/HowWeHire/HowWeHire'
 import Pricing from './screens/Pricing/Pricing'
 import TrueClassicStory from './screens/SuccessStory/Story1'
 import NikSharmaPlaybook from './screens/HowToGuide/NickStory'
+import Privacy from './screens/Privacy'
+import Terms from './screens/Terms'
 import './App.css'
 
 const AppContent: React.FC = () => {
@@ -34,6 +36,8 @@ const AppContent: React.FC = () => {
         <Route path="/how-to-guide" element={<HowToGuide />} />
         <Route path="/success-story/Story1" element={<TrueClassicStory />} />
         <Route path="/guides/NickStory" element={<NikSharmaPlaybook/>} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
     </div>
   );
