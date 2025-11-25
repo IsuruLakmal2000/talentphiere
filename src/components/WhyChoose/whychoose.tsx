@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./whychoose.css";
 
 //Import icons
@@ -58,44 +59,66 @@ const WhyOceans: React.FC = () => {
         {/* Left column */}
         <div className="home-card-column left">
           {leftCards.map((card, index) => (
-            <div
+            <motion.div
               key={index}
               className="home-ocean-card"
               style={{ transform: `rotate(${card.rotate}deg)` }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              whileHover={{ scale: 1.05, rotate: 0 }}
             >
               <div className="home-card-icon">
               <img src={card.icon} alt={card.title} />
               </div>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Center text */}
-        <div className="home-why-center">
-          <div className="home-plus-icon">+</div>
+        <motion.div 
+          className="home-why-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.div 
+            className="home-plus-icon"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          >
+            +
+          </motion.div>
           <h2>Why Talentphere</h2>
           <p>
             Over 400 companies have embedded Talentphere talent into their
             organization.
           </p>
-        </div>
+        </motion.div>
 
         {/* Right column */}
         <div className="home-card-column right">
           {rightCards.map((card, index) => (
-            <div
+            <motion.div
               key={index}
               className="home-ocean-card"
               style={{ transform: `rotate(${card.rotate}deg)` }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              whileHover={{ scale: 1.05, rotate: 0 }}
             >
               <div className="home-card-icon">
-              <img src={card.icon} alt={card.title} />
+                <img src={card.icon} alt={card.title} />
               </div>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

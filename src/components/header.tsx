@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./header.css";
 
 interface HeaderProps {
@@ -31,19 +32,47 @@ const Header: React.FC<HeaderProps> = ({
       }
     >
       <div className="home-page-hero-content">
-        <h1 className="home-page-hero-title">{title}</h1>
-        {subtitle && <p className="home-page-hero-subtitle">{subtitle}</p>}
+        <motion.h1 
+          className="home-page-hero-title"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          {title}
+        </motion.h1>
+        {subtitle && (
+          <motion.p 
+            className="home-page-hero-subtitle"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          >
+            {subtitle}
+          </motion.p>
+        )}
 
         {buttonText && buttonLink && (
-          <Link to={buttonLink} className="home-page-hero-button">
-            {buttonText}
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          >
+            <Link to={buttonLink} className="home-page-hero-button">
+              {buttonText}
+            </Link>
+          </motion.div>
         )}
 
         {buttonText && onButtonClick && !buttonLink && (
-          <button className="home-page-hero-button" onClick={onButtonClick}>
+          <motion.button 
+            className="home-page-hero-button" 
+            onClick={onButtonClick}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          >
             {buttonText}
-          </button>
+          </motion.button>
         )}
 
         {/* You can pass custom children like images, extra buttons, etc. */}

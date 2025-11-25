@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "./HomeReview.css";
 import megaphone from "../../assets/icons/megaphone.png";
 
@@ -59,49 +60,75 @@ const SuccessStories: React.FC = () => {
 
   return (
     <section className="success-section">
-      <div className="success-header">
-        <div className="header-icon">
+      <motion.div 
+        className="success-header"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div 
+          className="header-icon"
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
+        >
           <img
             src={megaphone}
             alt="Megaphone"
           />
-        </div>
+        </motion.div>
         <h2>Want to see real client stories?</h2>
         <p>
           Our clients come from a range of different industries. Here are some
           common examples:
         </p>
-      </div>
+      </motion.div>
 
       <div className="success-content">
         {/* Left: Industry Cards */}
         <div className="industry-grid">
-          {stories.map((story) => (
-            <div
+          {stories.map((story, index) => (
+            <motion.div
               key={story.industry}
               className={`industry-card ${
                 activeStory.industry === story.industry ? "active" : ""
               }`}
               onMouseEnter={() => setActiveStory(story)}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -8 }}
             >
               <h3>{story.industry}</h3>
               <p>{story.description}</p>
               <span className="learn-more">Learn more</span>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Right: Active Review */}
-        <div className="review-panel">
-          <p className="review-text">“{activeStory.review}”</p>
-          <div className="reviewer">
-            <img src={activeStory.image} alt={activeStory.name} />
-            <div>
-              <h4>{activeStory.name}</h4>
-              <p>{activeStory.role}</p>
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={activeStory.industry}
+            className="review-panel"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.4 }}
+          >
+            <p className="review-text">"{activeStory.review}"</p>
+            <div className="reviewer">
+              <img src={activeStory.image} alt={activeStory.name} />
+              <div>
+                <h4>{activeStory.name}</h4>
+                <p>{activeStory.role}</p>
+              </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

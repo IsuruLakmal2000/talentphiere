@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./process.css";
 
 //import graphical icons
@@ -42,24 +43,48 @@ const Process: React.FC = () => {
   return (
     <section className="how-section">
       <div className="how-container">
-        <h2>How we do it</h2>
-        <p className="how-subtitle">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          How we do it
+        </motion.h2>
+        <motion.p 
+          className="how-subtitle"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           We take extra steps to know you and your needs, then select and match
           talent to ensure long-lasting partnerships.
-        </p>
+        </motion.p>
 
         <div className="how-timeline">
-          {steps.map((step) => (
-            <div key={step.id} className="how-step">
-              <div className="how-icon">
+          {steps.map((step, index) => (
+            <motion.div 
+              key={step.id} 
+              className="how-step"
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <motion.div 
+                className="how-icon"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <img src={step.icon} alt={step.title} />
-              </div>
+              </motion.div>
               <div className="how-content">
                 <div className="step-number">{step.id}</div>
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

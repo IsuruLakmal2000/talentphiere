@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import ReviewCard from "./ReviewCard";
 import "./review.css";
 
@@ -32,9 +33,22 @@ const columns = distribute(baseReviews, 3);
 
 const Review: React.FC = () => (
   <section className="reviews-root" aria-label="Customer reviews">
-    <div className="reviews-wrap">
+    <motion.div 
+      className="reviews-wrap"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       {columns.map((col, colIndex) => (
-        <div key={colIndex} className={`review-column col-${colIndex}`}>
+        <motion.div 
+          key={colIndex} 
+          className={`review-column col-${colIndex}`}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: colIndex * 0.2 }}
+        >
           <div className="review-viewport">
             <div className="review-track" role="list">
               {col.map((r) => (
@@ -46,9 +60,9 @@ const Review: React.FC = () => (
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   </section>
 );
 
