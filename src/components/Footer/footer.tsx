@@ -13,9 +13,9 @@ const FooterSection: React.FC = () => {
       <div className="footer-cta">
         <div className="footer-cta-content">
           <img src={logo} alt="Talentphere Logo" className="footer-logo" />
-          <h2 className="footer-heading">Start building brilliantly</h2>
+          <h2 className="footer-heading">Hire beyond borders</h2>
           <p className="footer-description">
-            We help you plug highly skilled and vetted global talent into your business, so you can focus on Building Brilliantly.
+            We bridge the gap between your business and world-class global experts, so you can focus on Expanding Your Vision.
           </p>
           <Link to="/hire" className="footer-button">Hire With Talentphere</Link>
         </div>

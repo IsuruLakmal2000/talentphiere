@@ -7,19 +7,24 @@ const CEOSection: React.FC = () => {
   return (
     <section className="ceo-message-section">
       <div className="ceo-content">
-        <h1>Great talent is global</h1>
-        <p>I've been lucky enough to work with global talent throughout my career — especially with folks in Sri Lanka, who deeply impressed me by their skill set, tenacity, drive, and overall business savvy.</p>
-        <p>At the same time, I knew entrepreneurs who were struggling to find great local talent.</p>
+        <h1>Excellence knows no borders</h1>
 
-        <h2>That was the start of Oceans.</h2>
-        <p>With the power of remote work, we're able to connect talented global individuals (we call them Divers) with fast-growing businesses around the world.</p>
-        <p>Our commitment is to facilitate the best working relationship between our clients and our Divers. That means a deep understanding of needs and motivations on both sides.</p>
-        <p>We promise our clients the best talent, which is why our hiring process is 6 steps long, and includes in depth training and support.</p>
-        <p>I’ve seen first hand the impact that Global Talent done right can make and I’m grateful for the opportunity to share that experience with you.</p>
+<p>Throughout my career, I’ve witnessed a simple truth: brilliance isn't limited by geography. I've worked with incredible professionals from [insert region, e.g., Asia / all over the world] who possessed unmatched skill, tenacity, and drive.</p>
 
+<p>Yet, I constantly saw ambitious business leaders struggling to find the right people in their local markets. The talent was out there, but they couldn't reach it.</p>
+
+<h2>That’s why we built Talentphere.</h2>
+
+<p>We exist to bridge the gap between high-growth businesses and the world’s hidden gems. We don't just fill seats; we connect you with dedicated professionals who are eager to help you build.</p>
+
+<p>Our philosophy is simple: quality over quantity. We believe that a successful partnership requires a deep understanding of both your company culture and the candidate's strengths.</p>
+
+<p>We promise you elite talent. That’s why our vetting process is rigorous, ensuring that every professional we place is not just skilled, but ready to hit the ground running.</p>
+
+<p>I’ve seen firsthand how the right global talent can transform a business, and I’m excited to bring that advantage to you.</p>
         <p className="ceo-signature">
-          <strong>Ian Myers</strong><br />
-          Founder @ Oceans
+          <strong>Dominic</strong><br />
+          Founder @ Talenphiere
         </p>
       </div>
       <div className="ceo-map-container">
